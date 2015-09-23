@@ -13,8 +13,8 @@
     <figure class="logo">
       <a href="#"><img src="" width="" height="" alt=""></a>
     </figure>
-    <a class="header-menu">
-      <nav>
+    <a class="main-menu">
+      <nav class="main-nav">
         <ul>
           <li><a href="#"></a></li>
           <li><a href="#"></a></li>
@@ -31,35 +31,43 @@
 <main>
   <div class="intro">
     <div class="container">
-      <p>Взгляните на мир иначе!</p>
+      <p class="intro__slogan">Взгляните на мир иначе!</p>
     </div>
   </div>
 
   <div class="download-app">
     <div class="container">
-      <a href="#" class="download">Скачать приложение</a>
-      <a href="#"><img src=""></a>
-      <a href="#"><img src=""></a>
-      <a href="#"><img src=""></a>
-      <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      <a class="download-btn" href="#">Скачать приложение</a>
+      <a class="download-app__type-of-platform" href="#"><img src=""></a>
+      <a class="download-app__type-of-platform" href="#"><img src=""></a>
+      <a class="download-app__type-of-platform" href="#"><img src=""></a>
+      <p class="download-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
     </div>
   </div>
 
   <div class="promo-questions">
     <div class="container">
-      <p class="promo-sentence">Устали от серости мегаполиса?</p>
-      <p class="promo-sentence">Нам есть, что вам предложить!</p>
+      <p class="promo-questions__text">Устали от серости мегаполиса?</p>
+      <p class="promo-questionx__text">Нам есть, что вам предложить!</p>
     </div>
   </div>
 
   <div class="app-description">
     <div class="container">
-      <div class="main-title">Поднимает настроение</div>
-      <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-      <div class="main-title">Меняет мир вокруг</div>
-      <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-      <div class="main-title">Заводит новых друзей</div>
-      <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+      <section class="description-item">
+        <div class="description-item__title">Поднимает настроение</div>
+        <p class="description-item__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+      </section>
+
+      <section class="description-item">
+        <div class="description-item__title">Меняет мир вокруг</div>
+        <p class="description-item__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+      </section>
+
+      <section class="description-item">
+        <div class="description-item__title">Заводит новых друзей</div>
+        <p class="description-item__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+      </section>
     </div>
   </div>
 
@@ -68,15 +76,15 @@
       <input type="radio" id="btn-01" name="toggle1" checked>
       <input type="radio" id="btn-02" name="toggle1">
       <input type="radio" id="btn-03" name="toggle1">
-      <div class="comments-slider-controls">
+      <div class="comments-slider__controls">
         <label for="btn-01"></label>
         <label for="btn-02"></label>
         <label for="btn-03"></label>
       </div>
-      <div class="comments-slides">
-        <div class="comments-slide">
-          <div class="main-title">Николай Петров</div>
-          <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+      <div class="comments-slider__slides">
+        <div class="comments-slider__one-slide">
+          <div class="comments-slider__slide-title">Николай Петров</div>
+          <p class="comment-slider__slide-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
             А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </div>
@@ -89,13 +97,13 @@
       <input type="radio" id="btn-1" name="toggle2">
       <input type="radio" id="btn-2" name="toggle2" checked>
       <input type="radio" id="btn-3" name="toggle2">
-      <div class="packages-slider-controls">
+      <div class="packages-slider__controls">
         <label for="btn-1"></label>
         <label for="btn-2"></label>
         <label for="btn-3"></label>
       </div>
-      <div class="packages-slides">
-        <div class="package-slide">
+      <div class="packages-slider__slides">
+        <div class="package-slider__one-slide">
           <ul>
             <li></li>
             <li></li>
@@ -119,21 +127,21 @@
     </div>
   </div>
 
-  <div class="contacts">
+  <div class="contacts-info">
     <div class="container">
-      <p class="promo-sentence">Остались вопросы? Свяжитесь с нами!</p>
-      <div class="main-title">Звоните:</div>
-      <a class="footer-info" href="tel:+78125556666">+7 (812) 555-66-66</a>
-      <div class="main-title">Пишите:</div>
-      <a class="footer-info" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      <div class="main-title">Приезжайте в гости:</div>
-      <div class="footer-info">ул. Большая Конюшенная, 19/8</div>
+      <p class="contacts-info__promo-sentence">Остались вопросы? Свяжитесь с нами!</p>
+      <div class="contacts-info__main-title">Звоните:</div>
+      <a class="contacts-info__contact" href="tel:+78125556666">+7 (812) 555-66-66</a>
+      <div class="contacts-info__main-title">Пишите:</div>
+      <a class="contacts-info__contact" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      <div class="contacts-info__main-title">Приезжайте в гости:</div>
+      <div class="contacts-info__contact">ул. Большая Конюшенная, 19/8</div>
     </div>
   </div>
 </main>
 
-<footer>
-  <div class="map">
+<footer class="index-main-footer">
+  <div class="index-main-footer__map">
     <img src="" width="" height="" alt="">
   </div>
 </footer>
