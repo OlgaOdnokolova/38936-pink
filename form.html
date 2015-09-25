@@ -15,18 +15,18 @@
     <a class="main-menu">
       <nav class="main-nav">
         <ul>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
+          <li class="main-nav__element"><a href="#"></a></li>
+          <li class="main-nav__element"><a href="#"></a></li>
+          <li class="main-nav__element"><a href="#"></a></li>
+          <li class="main-nav__element"><a href="#"></a></li>
+          <li class="main-nav__element"><a href="#"></a></li>
         </ul>
       </nav>
     </a>
   </div>
 </header>
 
-<main>
+<main class="inner">
   <div class="intro">
     <div class="container">
       <p class="intro__slogan"> Конкурс на самое безбашеное путешествие с Пинк</p>
@@ -35,7 +35,7 @@
 
   <form class="questionnaire" enctype="multipart/form-data" action="/echo" method="post">
 
-    <div class="personal-data  personal-data--bg">
+    <div class="personal-data  first-bg">
       <div class="container">
         <p class="personal-data__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
 
@@ -50,27 +50,27 @@
       </div>
     </div>
 
-    <div class="what-app  what-app--bg">
+    <div class="what-app  second-bg">
       <div class="container">
         <div class="questionnaire-block-title">С каким приложением путешествовали? *</div>
 
-        <input id="iOS" type="radio" value="iOS" name="kind-of-app" checked>
+        <input id="iOS" type="radio" value="iOS" name="app-kind" checked>
         <label for="iOS">Pink для iOS</label>
 
-        <input id="android" type="radio" value="android" name="kind-of-app">
+        <input id="android" type="radio" value="android" name="app-kind">
         <label for="android">Pink на Android</label>
 
-        <input id="windows-phone" type="radio" value="windows-phone" name="kind-of-app">
+        <input id="windows-phone" type="radio" value="windows-phone" name="app-kind">
         <label for="windows-phone">Windows Phone</label>
       </div>
     </div>
 
-    <div class="time-of-traveling  time-of-traveling--bg">
+    <div class="traveling-time  first-bg">
       <div class="container">
         <div class="questionnaire-block-title">Когда вы путешествовали? *</div>
 
-        <input id="date-of-departure" type="text" name="date-of-departure" placeholder="1 апреля 2015" required>
-        <label for="date-of-departure">Дата выезда</label>
+        <input id="departure-date" type="text" name="departure-date" placeholder="1 апреля 2015" required>
+        <label for="departure-date">Дата выезда</label>
 
         <input id="duration" type="text" name="duration" placeholder="10 дней" required>
         <label for="duration">Продолжительность</label>
@@ -80,7 +80,7 @@
       </div>
     </div>
 
-    <div class="fellow-travelers  fellow-travelers--bg">
+    <div class="fellow-travelers  second-bg">
       <div class="container">
         <div class="questionnaire-block-title">Количество попутчиков *</div>
         <input type="number" min="1" step="1" value="2" required>
@@ -107,15 +107,15 @@
       </div>
     </div>
 
-    <div class="travel-achievements  travel-achievements--bg">
+    <div class="travel-achievements  first-bg">
       <div class="container">
         <div class="questionnaire-block-title">Ваши безбашенные достижения в путешествии</div>
 
         <input id="selfi-with-shark" type="checkbox" name="selfi-with-shark" checked>
         <label for="selfi-with-shark">Сделал селфи с акулой</label>
 
-        <input id="burned-on-the-beach" type="checkbox" name="burned-on-the-beach" checked>
-        <label for="burned-on-the-beach">Обгорел на пляже</label>
+        <input id="burned-on-beach" type="checkbox" name="burned-on-beach" checked>
+        <label for="burned-on-beach">Обгорел на пляже</label>
 
         <input id="chuck-norris" type="checkbox" name="chuck-norris">
         <label for="chuck-norris">Видел Чака Норриса</label>
@@ -131,7 +131,7 @@
       </div>
     </div>
 
-    <div class="download-photos  download-photos--bg">
+    <div class="download-photos  second-bg">
       <div class="container">
         <div class="questionnaire-block-title">Ваши фотографии из поездки *</div>
 
@@ -150,24 +150,24 @@
       </div>
     </div>
 
-    <div class="button-of-form  button-of-form--bg">
+    <div class="form-btn  first-bg">
       <div class="container">
         <button type="submit">Отправить форму</button>
-        <p class="button-of-form__text-under">* — обязательные поля</p>
+        <p class="form-btn__text-under">* — обязательные поля</p>
       </div>
     </div>
   </form>
 </main>
 
-<footer class="inner-page-footer">
+<footer class="inner-footer">
   <div class="container">
     <figure class="logo-var2">
       <a href="#"><img src="" width="" height="" alt=""></a>
     </figure>
     <div class="social">
-      <a class="social__btn  social__btn--icon-twitter" href="#"></a>
-      <a class="social__btn  social__btn--icon-facebook" href="#"></a>
-      <a class="social__btn  social__btn--icon-youtube" href="#"></a>
+      <a class="social__btn  social__btn--twitter" href="#"></a>
+      <a class="social__btn  social__btn--facebook" href="#"></a>
+      <a class="social__btn  social__btn--youtube" href="#"></a>
     </div>
     <div class="developed-by">Разработано</div>
   </div>
