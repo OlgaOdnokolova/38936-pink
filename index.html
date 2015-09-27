@@ -3,58 +3,60 @@
 
 <head>
   <meta charset="utf-8">
-  <link href="css/normalize.css" type="text/css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
   <title>Pink-Главная страница</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,800&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>  <link href="css/normalize.css" type="text/css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
 <header class="main-header">
   <div class="container"><!-- clearfix в псевдоэлемент-->
-    <figure class="logo">
+    <div class="logo">
       <a href="#"><img src="img/img-logo.png" width="74" height="23" alt="Logo"></a>
-    </figure>
-    <a class="main-menu">
-      <nav class="main-nav">
-        <ul>
-          <li class="main-nav__element"><a href="#"></a></li>
-          <li class="main-nav__element"><a href="#"></a></li>
-          <li class="main-nav__element"><a href="#"></a></li>
-          <li class="main-nav__element"><a href="#"></a></li>
-          <li class="main-nav__element"><a href="#"></a></li>
-        </ul>
-      </nav>
-    </a>
+    </div>
+    <a class="main-menu">Меню</a>
+    <nav class="main-nav">
+      <ul>
+        <li class="main-nav__element"><img src="img/img-logo.png" width="74" height="23" alt="Logo"></li>
+        <li class="main-nav__element"><a href="#">Информация</a></li>
+        <li class="main-nav__element"><a href="#">Блог</a></li>
+        <li class="main-nav__element"><a href="#">Отзывы</a></li>
+        <li class="main-nav__element"><a href="#">Конкурс</a></li>
+      </ul>
+    </nav>
+
   </div>
 </header>
 
 
 <main class="index-main">
+
   <div class="intro  intro--index">
     <div class="container">
-      <p class="intro__slogan">Взгляните на мир иначе!</p>
+      <p class="intro__slogan">Взгляните на жизнь иначе!</p>
     </div>
   </div>
 
-  <div class="download-app">
+  <div class="download-app  download-app--bg">
     <div class="container">
       <a class="download-app__link" href="#">Скачать приложение</a>
-      <a class="download-app__platform" href="#"><img src=""></a>
-      <a class="download-app__platform" href="#"><img src=""></a>
-      <a class="download-app__platform" href="#"><img src=""></a>
+      <a class="download-app__platform" href="#"><img src="img/icon-apple.png" width="46" height="57" alt="platform-apple"></a>
+      <a class="download-app__platform" href="#"><img src="img/icon-android.png" width="42" height="47" alt="platform-android"></a>
+      <a class="download-app__platform  download-app__platform--last" href="#"><img src="img/icon-microsoft.png" width="44" height="42" alt="platform-microsoft"></a>
       <p class="download-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
     </div>
   </div>
 
-  <div class="promo-questions  first-bg">
+  <div class="promo-questions  promo-questions--bg">
     <div class="container">
       <p class="promo-questions__text">Устали от серости мегаполиса?</p>
-      <p class="promo-questionx__text">Нам есть, что вам предложить!</p>
+      <p class="promo-questions__text">Нам есть, что вам предложить!</p>
     </div>
   </div>
 
-  <div class="app-description  second-bg">
+  <div class="app-description  app-description--bg">
     <div class="container">
       <section class="description-item">
         <div class="description-item__title">Поднимает настроение</div>
@@ -68,12 +70,12 @@
 
       <section class="description-item">
         <div class="description-item__title">Заводит новых друзей</div>
-        <p class="description-item__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+        <p class="description-item__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
       </section>
     </div>
   </div>
 
-  <div class="comments-slider  first-bg">
+  <div class="comments-slider  comments-slider--bg">
     <div class="container">
       <input type="radio" id="btn-01" name="toggle1" checked>
       <input type="radio" id="btn-02" name="toggle1">
@@ -86,7 +88,7 @@
       <div class="comments-slider__slides">
         <div class="comments-slider__slide">
           <div class="comments-slider__slide-title">Николай Петров</div>
-          <p class="comment-slider__slide-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+          <p class="comments-slider__slide-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
             А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </div>
@@ -94,7 +96,7 @@
     </div>
   </div>
 
-  <div class="packages-slider  second-bg">
+  <div class="packages-slider  packages-slider--bg">
     <div class="container">
       <input type="radio" id="btn-1" name="toggle2">
       <input type="radio" id="btn-2" name="toggle2" checked>
@@ -105,46 +107,46 @@
         <label for="btn-3"></label>
       </div>
       <div class="packages-slider__slides">
-        <div class="package-slider__slide">
+        <div class="packages-slider__slide">
+          <!--<ul>-->
+            <!--<li></li>-->
+            <!--<li></li>-->
+            <!--<li></li>-->
+            <!--<li></li>-->
+          <!--</ul>-->
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-          <ul>
-            <li>Стандарт 3,99USD</li>
+            <li>Стандарт <br><span>3,99USD</span></li>
             <li>Розовый фильтр</li>
             <li>Смайлики</li>
             <li>Комментарии</li>
           </ul>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+          <!--<ul>-->
+            <!--<li></li>-->
+            <!--<li></li>-->
+            <!--<li></li>-->
+            <!--<li></li>-->
+          <!--</ul>-->
         </div>
       </div>
     </div>
   </div>
 
-  <div class="contacts-info  first-bg">
+  <div class="contacts  contacts--bg">
     <div class="container">
-      <p class="contacts-info__promo">Остались вопросы? Свяжитесь с нами!</p>
-      <div class="contacts-info__title">Звоните:</div>
-      <a class="contacts-info__contact" href="tel:+78125556666">+7 (812) 555-66-66</a>
-      <div class="contacts-info__title">Пишите:</div>
-      <a class="contacts-info__contact" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      <div class="contacts-info__title">Приезжайте в гости:</div>
-      <div class="contacts-info__contact">ул. Большая Конюшенная, 19/8</div>
+      <p class="contacts__promo">Остались вопросы? Свяжитесь с нами!</p>
+      <div class="contacts__title">Звоните:</div>
+      <a class="contacts__contact" href="tel:+78125556666">+7 (812) 555-66-66</a>
+      <div class="contacts__title">Пишите:</div>
+      <a class="contacts__contact" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      <div class="contacts__title">Приезжайте в гости:</div>
+      <div class="contacts__contact">ул. Большая Конюшенная, 19/8</div>
     </div>
   </div>
 </main>
 
 <footer class="index-footer">
   <div class="index-footer__map">
-    <img src="" width="" height="" alt="">
+    <img src="img/img-small_map.jpg" width="320" height="200" alt="map">
   </div>
 </footer>
 
