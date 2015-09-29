@@ -18,13 +18,12 @@
   &--bg{
     background-color: #1d2631;
   }
-  &__link{
+  &__btn{
     display: block;
     padding: 15px 37px;
     margin-bottom: 30px;
     text-decoration: none;
     font-size: ($font-size-base)+4px;
-    line-height: ($line-height-base)-6px;
     font-weight: 600;
     border: 3px solid #ffffff;
     border-radius: 30px;

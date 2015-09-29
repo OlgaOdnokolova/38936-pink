@@ -2,6 +2,7 @@
 
 body {
   width: 320px;
+  margin: 0;
   font-family: $font-family-base;
   line-height: $line-height-base;
   font-weight: $font-weight-base;
@@ -97,10 +98,6 @@ p {
     background-color: #0b97c4;
     cursor: pointer;
   }
-}
-
-.main-menu:hover ~ .main-nav {
-  display: block;
 }
 
 .intro {
