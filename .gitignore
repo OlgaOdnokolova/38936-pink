@@ -6,3 +6,11 @@ prepros.cfg
 *.sublime*
 *.map
 css/*.css
+
+.idea/38936-pink.iml
+
+.idea/jsLibraryMappings.xml
+
+.idea/libraries/38936_pink_node_modules.xml
+
+.idea/workspace.xml
