@@ -4,6 +4,7 @@ body {
   width: 320px;
   margin: 0;
   font-family: $font-family-base;
+  font-size: $font-size-base;
   line-height: $line-height-base;
   font-weight: $font-weight-base;
   color: $text-color-base;
@@ -13,7 +14,6 @@ ul{
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 0;
 }
 
 .container {
@@ -35,17 +35,15 @@ p {
   background-color: rgba(0,0,0,.3);
 }
 
-.main-header .container:after {
-  content: " ";
-  display: table;
-  clear: both;
+.main-header .container::after {
+  @include clearfix;
 }
 
 .logo {
   float: left;
 }
 
-.main-menu{
+.main-menu {
   float: right;
   display: block;
   width: 50px;
@@ -106,8 +104,40 @@ p {
   background: url("../img/bg-intro.jpg") no-repeat;
   &__slogan {
     font-size: 24px;
+    line-height: $line-height30;
     font-weight: 300;
     color: $promo-text-color;
     text-align: center;
   }
+}
+
+.inner-footer {
+  padding-bottom: 45px;
+}
+
+.logo-var2 {
+  margin-bottom: 40px;
+  a {
+    display: block;
+    text-align: center;
+  }
+}
+
+.social {
+  margin-bottom: 40px;
+  font-size: 0;
+  text-align: center;
+  &__btn {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 12px;
+    width: 45px;
+    height: 45px;
+    border: 3px solid #e5e5e5;
+    border-radius: 50%;
+  }
+}
+
+.developed-by {
+
 }

@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Выиграй путешествие от Пинк</title>
+  <meta charset="UTF-8">
+  <title>Выиграй путешествие от Пинк</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,800&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>  <link href="css/normalize.css" type="text/css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
 <header class="main-header">
-  <div class="container"><!-- clearfix в псевдоэлемент-->
-    <figure class="logo">
-      <a href="#"><img src="" width="" height="" alt=""></a>
-    </figure>
-    <a class="main-menu">
-      <nav class="main-nav">
-        <ul>
-          <li class="main-nav__element"><a href="#"></a></li>
-          <li class="main-nav__element"><a href="#"></a></li>
-          <li class="main-nav__element"><a href="#"></a></li>
-          <li class="main-nav__element"><a href="#"></a></li>
-          <li class="main-nav__element"><a href="#"></a></li>
-        </ul>
-      </nav>
-    </a>
+  <div class="container">
+    <div class="logo">
+      <a href="#"><img src="img/img-logo.png" width="74" height="23" alt="Logo"></a>
+    </div>
+    <a class="main-menu">Меню</a>
+    <nav class="main-nav">
+      <ul>
+        <li class="main-nav__element"><img src="img/img-logo.png" width="74" height="23" alt="Logo"></li>
+        <li class="main-nav__element"><a href="#">Информация</a></li>
+        <li class="main-nav__element"><a href="#">Блог</a></li>
+        <li class="main-nav__element"><a href="#">Отзывы</a></li>
+        <li class="main-nav__element"><a href="#">Конкурс</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
 <main class="inner">
   <div class="intro">
     <div class="container">
-      <p class="intro__slogan"> Конкурс на самое безбашеное путешествие с Пинк</p>
+      <p class="intro__slogan">Конкурс на самое безбашеное путешествие с Пинк</p>
     </div>
   </div>
 
@@ -39,10 +41,10 @@
       <div class="container">
         <p class="personal-data__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
 
-        <label for="name">Имя:*</label>
+        <label for="name">Имя: *</label>
         <input id="name" type="text" name="name" placeholder="Введите ваше имя" required>
 
-        <label for="surname">Фамилия:*</label>
+        <label for="surname">Фамилия: *</label>
         <input id="surname" type="text" name="surname" placeholder="Укажите фамилию" required>
 
         <label for="patronymic">Отчество:</label>
@@ -52,7 +54,7 @@
 
     <div class="what-app  what-app--bg">
       <div class="container">
-        <div class="questionnaire-block-title">С каким приложением путешествовали? *</div>
+        <div class="what-app__title">С каким приложением путешествовали? *</div>
 
         <input id="iOS" type="radio" value="iOS" name="app-kind" checked>
         <label for="iOS">Pink для iOS</label>
@@ -67,39 +69,44 @@
 
     <div class="traveling-time  traveling-time--bg">
       <div class="container">
-        <div class="questionnaire-block-title">Когда вы путешествовали? *</div>
+        <div class="traveling-time__title">Когда вы путешествовали? *</div>
 
-        <input id="departure-date" type="text" name="departure-date" placeholder="1 апреля 2015" required>
+        <input id="departure-date" type="date" name="departure-date" placeholder="1 апреля 2015" required>
         <label for="departure-date">Дата выезда</label>
 
+        <div class="traveling-time__remove"></div>
         <input id="duration" type="text" name="duration" placeholder="10 дней" required>
+        <div class="traveling-time__add"></div>
         <label for="duration">Продолжительность</label>
 
-        <input id="return-date" type="text" name="return-date" placeholder="1 апреля 2015" required>
+        <input id="return-date" type="date" name="return-date" placeholder="1 апреля 2015" required>
         <label for="return-date">Дата Возвращения</label>
       </div>
     </div>
 
     <div class="fellow-travelers  fellow-travelers--bg">
       <div class="container">
-        <div class="questionnaire-block-title">Количество попутчиков *</div>
-        <input type="number" min="1" step="1" value="2" required>
+        <div class="fellow-travelers__title">Количество попутчиков *</div>
 
-        <div class="fellow-traveler-wrapper">
+        <div class="fellow-travelers__remove"></div>
+        <input type="number" min="1" step="1" value="2" required>
+        <div class="fellow-travelers__add"></div>
+
+        <div class="traveler">
           <!-- № сделать через псевдоэлемент, который будет привязан к лейблу-->
-          <label for="fellow-traveler-name1">Имя: *</label>
-          <!-- порядковый номер тоже сделать через псевдоэлемент, который будет привязан к инпуту-->
-          <input type="text" id="fellow-traveler-name1" name="fellow-traveler-name1" placeholder="Введите ваше имя" required>
+          <label for="traveler-name1">Имя: *</label>
+          <div class="traveler__number">1</div>
+          <input type="text" id="traveler-name1" name="traveler-name1" placeholder="Введите ваше имя" required>
 
           <label for="nickname1">Прозвище:</label>
           <input type="text" id="nickname1" name="nickname1" placeholder="Ну как же без этого!">
         </div>
 
-        <div class="fellow-traveler-wrapper">
+        <div class="traveler">
           <!-- № сделать через псевдоэлемент, который будет привязан к лейблу-->
-          <label for="fellow-traveler-name2">Имя: *</label>
-          <!-- порядковый номер тоже сделать через псевдоэлемент, который будет привязан к инпуту-->
-          <input type="text" id="fellow-traveler-name2" name="fellow-traveler-name2" placeholder="Введите ваше имя" required>
+          <label for="traveler-name2">Имя: *</label>
+          <div class="traveler__number">2</div>
+          <input type="text" id="traveler-name2" name="traveler-name2" placeholder="Введите ваше имя" required>
 
           <label for="nickname2">Прозвище:</label>
           <input type="text" id="nickname2" name="nickname2" placeholder="Ну как же без этого!">
@@ -109,7 +116,7 @@
 
     <div class="travel-achievements  travel-achievements--bg">
       <div class="container">
-        <div class="questionnaire-block-title">Ваши безбашенные достижения в путешествии</div>
+        <div class="travel-achievements__title">Ваши безбашенные достижения в путешествии</div>
 
         <input id="selfi-with-shark" type="checkbox" name="selfi-with-shark" checked>
         <label for="selfi-with-shark">Сделал селфи с акулой</label>
@@ -131,21 +138,47 @@
       </div>
     </div>
 
-    <div class="download-photos  download-photo--bg">
+    <div class="download-photos  download-photos--bg">
       <div class="container">
-        <div class="questionnaire-block-title">Ваши фотографии из поездки *</div>
+        <div class="download-photos__title">Ваши фотографии из поездки *</div>
 
-        <input type="file" name="your-photos">
+        <input type="file" name="your-photos" multiple value="Загрузить фото">
 
-        <div class="download-photos__wrapper-photos"><!-- clearfix в псевдоэлемент-->
-          <div class="download-photos__small-photo"><img src=""></div>
-          <div class="download-photos__small-photo"><img src=""></div>
-          <div class="download-photos__small-photo"><img src=""></div>
-          <div class="download-photos__small-photo"><img src=""></div>
-          <div class="download-photos__small-photo"><img src=""></div>
-          <div class="download-photos__small-photo"><img src=""></div>
-          <div class="download-photos__small-photo"><img src=""></div>
-          <div class="download-photos__small-photo"><img src=""></div>
+        <div class="download-photos__wrapper-photos">
+
+          <div class="download-photos__small-photo">
+            <img src="img/small-photo.jpg" width="67" height="68">
+            <div class="download-photos__photo-name">IMG-1.JPG</div>
+          </div>
+          <div class="download-photos__small-photo">
+            <img src="img/small-photo.jpg" width="67" height="68">
+            <div class="download-photos__photo-name">IMG-2.JPG</div>
+          </div>
+          <div class="download-photos__small-photo">
+            <img src="img/small-photo.jpg" width="67" height="68">
+            <div class="download-photos__photo-name">IMG-3.JPG</div>
+          </div>
+          <div class="download-photos__small-photo">
+            <img src="img/small-photo.jpg" width="67" height="68">
+            <div class="download-photos__photo-name">IMG-4.JPG</div>
+          </div>
+          <div class="download-photos__small-photo">
+            <img src="img/small-photo.jpg" width="67" height="68">
+            <div class="download-photos__photo-name">IMG-5.JPG</div>
+          </div>
+          <div class="download-photos__small-photo">
+            <img src="img/small-photo.jpg" width="67" height="68">
+            <div class="download-photos__photo-name">IMG-6.JPG</div>
+          </div>
+          <div class="download-photos__small-photo">
+            <img src="img/small-photo.jpg" width="67" height="68">
+            <div class="download-photos__photo-name">IMG-7.JPG</div>
+          </div>
+          <div class="download-photos__small-photo">
+            <img src="img/small-photo.jpg" width="67" height="68">
+            <div class="download-photos__photo-name">IMG-8.JPG</div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -153,7 +186,7 @@
     <div class="form-btn  form-btn--bg">
       <div class="container">
         <button type="submit">Отправить форму</button>
-        <p class="form-btn__text-under">* — обязательные поля</p>
+        <p class="form-btn__text-under"><span>*</span> — обязательные поля</p>
       </div>
     </div>
   </form>
@@ -161,9 +194,9 @@
 
 <footer class="inner-footer">
   <div class="container">
-    <figure class="logo-var2">
-      <a href="#"><img src="" width="" height="" alt=""></a>
-    </figure>
+    <div class="logo-var2">
+      <a href="#"><img src="img/logo-var2.png" width="145" height="40" alt="Logo"></a>
+    </div>
     <div class="social">
       <a class="social__btn  social__btn--twitter" href="#"></a>
       <a class="social__btn  social__btn--facebook" href="#"></a>

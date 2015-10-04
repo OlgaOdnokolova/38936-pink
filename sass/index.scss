@@ -23,7 +23,7 @@
     padding: 15px 37px;
     margin-bottom: 30px;
     text-decoration: none;
-    font-size: ($font-size-base)+4px;
+    font-size: $font-size18;
     font-weight: 600;
     border: 3px solid #ffffff;
     border-radius: 30px;
@@ -58,7 +58,7 @@
   padding-bottom: 20px;
   padding-top: 45px;
   text-align: center;
-  font-size: ($font-size-base)+10px;
+  font-size: $font-size24;
   &--bg{
     background-color: $first-bg;
   }
@@ -95,7 +95,7 @@
   text-align: center;
   &__title{
     margin-bottom: 20px;
-    font-size: ($font-size-base)+4px;
+    font-size: $font-size18;
     font-weight: 600;
   }
   &__text{
@@ -141,7 +141,7 @@
   }
   &__slide-title{
     margin-bottom: 25px;
-    font-size: ($font-size-base)+4px;
+    font-size: $font-size18;
     line-height: 30px;
     font-weight: 600;
   }
@@ -178,7 +178,7 @@
   }
   input[type="radio"]{
     position: absolute;
-    opacity: 0;
+    display: none;
   }
   &__controls{
     content: " ";
@@ -201,15 +201,48 @@
       cursor: pointer;
     }
   }
-  &__slide{
+  &__inner {
+    overflow: hidden;
+  }
+  &__slides{
+    position: relative;
+    width: 300%;
+    transition: transform .8s ease;
+    ul {
+      position: relative;
+      float: left;
+      width: 276px;
+      overflow: hidden;
+      border-right: $form-grey-border;
+      //box-shadow: inset 0px 0px 0px 2px #ABABAB;
+    }
+    ul:first-child {
+      border-left: $form-grey-border;
+    }
+    ul:nth-child(2)::before {
+      content: "Хит";
+      display: table;
+      position: absolute;
+      top: 8px;
+      left: -24px;
+      width: 100px;
+      height: 20px;
+      font-size: $font-size-base;
+      color: #ffffff;
+      text-align: center;
+      background-color: #d22856;
+      transform: rotate(-42deg);
+      transform-origin: 50% 50%;
+      z-index: 50;
+    }
     ul li{
       position: relative;
-      padding: 22px 50px 22px 20px;
+      padding: 22px 50px 22px 22px;
       font-size: $font-size-base;
       line-height: 30px;
       text-transform: uppercase;
       background-color: #ffffff;
-      border-bottom: 1px solid #e5e5e5;
+      border-bottom: 2px solid #e5e5e5;
     }
     ul li::after{
       content: " ";
@@ -224,35 +257,22 @@
     ul li:first-child{
       text-align: center;
       padding: 22px 0;
-      font-size: ($font-size-base)+4px;
+      font-size: $font-size18;
       font-weight: 600;
       line-height: 30px;
       color: #ffffff;
       overflow: hidden;
       text-transform: uppercase;
       background-color: $text-color-base;
+      border-bottom: none;
       span{
-        font-size: ($font-size-base)+10px;
+        font-size: $font-size24;
         font-weight: 300;
         line-height: 30px;
       }
     }
     ul li:first-child::after{
       display: none;
-    }
-    ul li:first-child::before{
-      content: "Хит";
-      display: table;
-      position: absolute;
-      top: 8px;
-      left: -24px;
-      width: 100px;
-      height: 20px;
-      font-size: 14px;
-      color: #ffffff;
-      background-color: #d22856;
-      transform: rotate(-42deg);
-      transform-origin: 50% 50%;
     }
   }
 }
@@ -264,22 +284,34 @@
   border-color: #283645;
 }
 
+#btn-1:checked~ .packages-slider__inner .packages-slider__slides {
+  transform: translate(20px);
+}
+
+#btn-2:checked~ .packages-slider__inner .packages-slider__slides {
+  transform: translate(-260px);
+}
+
+#btn-3:checked~ .packages-slider__inner .packages-slider__slides {
+  transform: translate(-540px);
+}
+
 .contacts{
   padding: 40px 0;
   text-align: center;
   &__promo{
     margin-bottom: 40px;
-    font-size: ($font-size-base)+10px;
+    font-size: $font-size24;
     font-weight: 300;
   }
   &__title{
-    font-size: ($font-size-base)+4px;
+    font-size: $font-size18;
     font-weight: 600;
   }
   &__contact{
     display: block;
     margin-bottom: 30px;
-    font-size: ($font-size-base)+10px;
+    font-size: $font-size24;
     font-weight: 300;
     color: #d22856;
     text-decoration: none;
