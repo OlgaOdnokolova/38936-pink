@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+  <meta charset="UTF-8">
+  <title>Пост</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,800&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>  <link href="css/normalize.css" type="text/css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
 <header class="main-header">
   <div class="container"><!-- clearfix в псевдоэлемент-->
-    <figure class="logo">
-      <a href="#"><img src="" width="" height="" alt=""></a>
-    </figure>
-    <a class="main-menu">
-      <nav class="main-nav">
-        <ul>
-          <li class="main-nav__element"><a href="#"></a></li>
-          <li class="main-nav__element"><a href="#"></a></li>
-          <li class="main-nav__element"><a href="#"></a></li>
-          <li class="main-nav__element"><a href="#"></a></li>
-          <li class="main-nav__element"><a href="#"></a></li>
-        </ul>
-      </nav>
-    </a>
+    <div class="logo">
+      <a href="#"><img src="img/img-logo.png" width="74" height="23" alt="Logo"></a>
+    </div>
+    <a class="main-menu">Меню</a>
+    <nav class="main-nav">
+      <ul>
+        <li class="main-nav__element"><img src="img/img-logo.png" width="74" height="23" alt="Logo"></li>
+        <li class="main-nav__element"><a href="#">Информация</a></li>
+        <li class="main-nav__element"><a href="#">Блог</a></li>
+        <li class="main-nav__element"><a href="#">Отзывы</a></li>
+        <li class="main-nav__element"><a href="#">Конкурс</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
@@ -35,23 +37,23 @@
 
   <div class="container">
     <article class="post">
-      <header class="post-header">
-        <h1 class="post-title">Антон и Надя в Тайланде</h1>
-        <div class="post-header__post-date">Опубликовано: <time datetime="">6 месяцев назад</time></div>
-        <p class="post-header__text">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально
+      <header class="post__header">
+        <h1 class="post__header-title">Антон и Надя в Тайланде</h1>
+        <div class="post__date">Опубликовано: <time datetime="">6 месяцев назад</time></div>
+        <p class="post__header-text">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально
           избегать избитых туристических мест и районов.</p>
       </header>
 
-      <section class="post-part">
-        <h2 class="post-small-title">Предыстория</h2>
-          <p class="post-part__text">В Азию нам хотелось попасть уже давно, но все время что-то останавливало.
+      <section class="post__part">
+        <h2 class="post__part-title">Предыстория</h2>
+          <p class="post__part-text">В Азию нам хотелось попасть уже давно, но все время что-то останавливало.
             Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды.
             Однако, увидев выгодные билеты на <a href="#">skyscanner.ru</a> мы все-таки решились!</p>
       </section>
 
-      <section class="post-part">
-        <h2 class="post-small-title">Выбор отеля</h2>
-        <p class="post-part__text">В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как
+      <section class="post__part">
+        <h2 class="post__part-title">Выбор отеля</h2>
+        <p class="post__part-text">В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как
           достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких
           разных городах. В итоге мы остановились на следующих:
           <ul>
@@ -63,13 +65,13 @@
         <blockquote class="smbd-comment">
           Замечательное место,в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный,еда-потрясающая.
           Отель расположен в тихом и уединенном месте-в чем вся и прелесть. СПА отличный. Потрясающие виды.
-          <span>Олег, г. Москва</span>
+          <br><span>Олег, г. Москва</span>
         </blockquote>
       </section>
 
-      <section class="post-part">
-        <h2 class="post-small-title">Местная еда</h2>
-        <p class="post-part__text">Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит
+      <section class="post__part">
+        <h2 class="post__part-title">Местная еда</h2>
+        <p class="post__part-text">Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит
           делать из этого проблему — просто попросите сделать ваше блюдо «not spicy». Желающие могут попробовать жареных
           тараканчиков. Мы не рискнули.</p>
       </section>
@@ -85,9 +87,9 @@
 
 <footer class="inner-footer">
   <div class="container">
-    <figure class="logo-var2">
-      <a href="#"><img src="" width="" height="" alt=""></a>
-    </figure>
+    <div class="logo-var2">
+      <a href="#"><img src="img/logo-var2.png" width="145" height="40" alt="Logo"></a>
+    </div>
     <div class="social">
       <a class="social__btn  social__btn--twitter" href="#"></a>
       <a class="social__btn  social__btn--facebook" href="#"></a>
