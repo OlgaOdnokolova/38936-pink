@@ -3,9 +3,12 @@
 .intro{
   &--index{
     min-height: 390px;
-    background-image: url("../img/bg-index_intro.png"), url("../img/bg-intro.jpg");
+    background-image: url("../img/iphone-hand-mobile.png"), url("../img/background-mobile@1x.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: bottom, bottom;
+  }
+  &__download-app {
+    display: none;
   }
 }
 
@@ -20,7 +23,8 @@
   }
   &__btn{
     display: block;
-    padding: 15px 37px;
+    //padding: 15px 37px;
+    padding: 15px 11.5%;
     margin-bottom: 30px;
     text-decoration: none;
     font-size: $font-size18;
@@ -34,7 +38,8 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    margin-right: 35px;
+    //margin-right: 35px;
+    margin-right: 10.9%;
     width: 46px;
     height: 57px;
     &--last{
@@ -70,8 +75,10 @@
 
 .app-description {
   position: relative;
-  padding-top: 50px;
-  padding-bottom: 300px;
+  //padding-top: 50px;
+  padding-top: 15.625%;
+  //padding-bottom: 300px;
+  padding-bottom: 93.75%;
   &--bg{
     background-color: $second-bg;
     background-image: url(../img/img-iphone_screen.png);
@@ -83,18 +90,20 @@
     display: table;
     position: absolute;
     top: -21px;
-    width: 320px;
+    width: 100%;
     height: 45px;
     background-color: $second-bg;
-    transform: skewY(-6deg);
+    transform: skewY(-5deg);
   }
 }
 
 .description-item{
-  margin-bottom: 40px;
+  //margin-bottom: 40px;
+  margin-bottom: 14.29%;
   text-align: center;
   &__title{
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
+    margin-bottom: 7.14%;
     font-size: $font-size18;
     font-weight: 600;
   }
@@ -103,6 +112,10 @@
     color: $text-color-base;
   }
 }
+
+.app-effect {
+     display: none;
+   }
 
 .comments-slider {
   position: relative;
@@ -142,13 +155,16 @@
   &__slide-title{
     margin-bottom: 25px;
     font-size: $font-size18;
-    line-height: 30px;
+    line-height: $line-height30;
     font-weight: 600;
+    span {
+      display: none;
+    }
   }
   &__slide-text{
     font-size: $font-size-base;
     color: $text-color-base;
-    line-height: 30px;
+    line-height: $line-height30;
   }
 }
 
@@ -168,10 +184,10 @@
     display: table;
     position: absolute;
     top: -21px;
-    width: 320px;
+    width: 100%;
     height: 45px;
     background-color: $second-bg;
-    transform: skewY(-6deg);
+    transform: skewY(-5deg);
   }
   &--bg{
     background-color: $second-bg;
@@ -183,8 +199,10 @@
   &__controls{
     content: " ";
     position: absolute;
-    left: 105px;
-    bottom: 45px;
+    //left: 105px;
+    left: 32.81%;
+    //bottom: 45px;
+    bottom: 14.06%;
     width: 100px;
     height: 15px;
     text-align: center;
@@ -196,7 +214,7 @@
       height: 6px;
       margin: 0 8px;
       background-color: #bec2c7;
-      border: 2px solid #f2f2f2;
+      border: 3px solid #f2f2f2;
       border-radius: 50%;
       cursor: pointer;
     }
@@ -211,15 +229,16 @@
     ul {
       position: relative;
       float: left;
-      width: 276px;
+      //width: 276px;
+      width: 28.75%;
       overflow: hidden;
       border-right: $form-grey-border;
       //box-shadow: inset 0px 0px 0px 2px #ABABAB;
     }
-    ul:first-child {
+    ul:nth-child(2) {
       border-left: $form-grey-border;
     }
-    ul:nth-child(2)::before {
+    ul:nth-child(3)::before {
       content: "Хит";
       display: table;
       position: absolute;
@@ -237,9 +256,10 @@
     }
     ul li{
       position: relative;
-      padding: 22px 50px 22px 22px;
+      //padding: 22px 50px 22px 22px;
+      padding: 7.97% 18.1% 7.97% 7.97%;
       font-size: $font-size-base;
-      line-height: 30px;
+      line-height: $line-height30;
       text-transform: uppercase;
       background-color: #ffffff;
       border-bottom: 2px solid #e5e5e5;
@@ -249,31 +269,35 @@
       display: table;
       position: absolute;
       width: 35px;
+      //width: 17.2%;
       height: 35px;
+      //height: 17.2%;
       right: 10px;
       bottom: 15px;
       background-color: #0b97c4;
     }
     ul li:first-child{
       text-align: center;
-      padding: 22px 0;
+      //padding: 22px 0;
+      padding: 7.97% 0;
       font-size: $font-size18;
       font-weight: 600;
-      line-height: 30px;
+      line-height: $line-height30;
       color: #ffffff;
       overflow: hidden;
       text-transform: uppercase;
       background-color: $text-color-base;
       border-bottom: none;
-      span{
-        font-size: $font-size24;
-        font-weight: 300;
-        line-height: 30px;
-      }
     }
     ul li:first-child::after{
       display: none;
     }
+  }
+  &__price {
+    display: inline;
+    font-size: $font-size24;
+    font-weight: 300;
+    line-height: $line-height30;
   }
 }
 
@@ -285,19 +309,23 @@
 }
 
 #btn-1:checked~ .packages-slider__inner .packages-slider__slides {
-  transform: translate(20px);
+  //transform: translate(20px);
+  transform: translate(2.08%);
 }
 
 #btn-2:checked~ .packages-slider__inner .packages-slider__slides {
-  transform: translate(-260px);
+  //transform: translate(-260px);
+  transform: translate(-27.08%);
 }
 
 #btn-3:checked~ .packages-slider__inner .packages-slider__slides {
-  transform: translate(-540px);
+  //transform: translate(-540px);
+  transform: translate(-56.25%);
 }
 
 .contacts{
-  padding: 40px 0;
+  //padding: 40px 0;
+  padding: 12.5% 0;
   text-align: center;
   &__promo{
     margin-bottom: 40px;
@@ -319,4 +347,203 @@
   &--bg{
     background-color: $first-bg;
   }
+}
+
+
+@media (min-width: 620px) {
+
+  .intro {
+    &--index {
+      min-height: 615px;
+      background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/background-tablet@1x.jpg");
+      background-repeat: no-repeat, no-repeat;
+      background-position: 92% 100%, bottom;
+      background-size: 100%, 170%;
+    }
+    &__slogan--index {
+      width: 31.03%;
+      margin-top: 16.13%;
+      margin-left: 9.68%;
+      margin-bottom: 6.45%;
+      font-size: 40px;
+      line-height: initial;
+    }
+    &__download-app {
+      display: block;
+      width: 48.39%;
+      font-weight: 300;
+      text-align: center;
+      font-size: $font-size18;
+      color: #ffffff;
+      &__btn {
+        display: block;
+        //padding: 15px 37px;
+        padding: 4.69% 11.5%;
+        //margin-bottom: 30px;
+        margin-bottom: 7.26%;
+        text-decoration: none;
+        font-size: $font-size18;
+        font-weight: 600;
+        border: 3px solid #ffffff;
+        border-radius: 30px;
+        color: #ffffff;
+        cursor: pointer;
+      }
+      &__platform {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        //margin-right: 35px;
+        margin-right: 5.97%;
+        width: 46px;
+        height: 57px;
+        &--last {
+          margin-right: 0;
+        }
+        img[src="img/icon-android.png"] {
+          position: relative;
+          bottom: -10px;
+        }
+        img[src="img/icon-microsoft.png"] {
+          position: relative;
+          bottom: -14px;
+        }
+      }
+    }
+  }
+
+  .download-app {
+    display: none;
+  }
+
+  .promo-questions {
+    padding-bottom: 17.3%;
+    font-size: 40px;
+    &__text {
+      margin-bottom: 2.9%;
+    }
+    &__text:last-child {
+      width: 54.84%;
+      margin: 0 auto;
+      line-height: 40px;
+    }
+  }
+
+  .app-description {
+    padding-bottom: 0.1%;
+    &::before {
+      top: -6.5625%;
+      height: 77px;
+    }
+    &--bg {
+      background-image: none;
+    }
+  }
+
+  .description-item {
+    width: 51.61%;
+    margin-bottom: 7.258%;
+    padding-left: 48.387%;
+    text-align: left;
+  }
+
+  .app-effect {
+    display: block;
+    margin-bottom: 12.097%;
+    &::after {
+      @include clearfix;
+    }
+    &__title {
+      padding-top: 6.45%;
+      margin-bottom: 3.23%;
+      font-size: 30px;
+      line-height: 36px;
+      font-weight: 600;
+    }
+    &__text {
+      margin-bottom: 3.23%;
+    }
+    &__link {
+      color: $text-color-red;
+      text-decoration: underline;
+    }
+  }
+
+  //картинка часов
+  #Layer_1 {
+    float: left;
+    margin-right: 6.129%;
+  }
+
+  .comments-slider {
+    padding-bottom: 19.35%;
+    &__slide-title {
+      display: table-footer-group;
+      span{
+        display: block;
+        font-size: $font-size-base;
+        font-weight: 400;
+      }
+    }
+    &__slide-text {
+      display: table-header-group;
+      margin-bottom: 6.45%;
+      font-size: $font-size18;
+    }
+    &__controls {
+      left: 45%;
+      bottom: 10%;
+    }
+  }
+
+  .packages-slider {
+    padding-left: 5.71%;
+    &::before {
+      height: 77px;
+      top: -7.5625%;
+      left: 0;
+    }
+    &__slides::after {
+      @include clearfix;
+    }
+    &__slides {
+      width: 100%;
+      ul {
+        width: 23.48%;
+      }
+      ul span {
+        display: none;
+      }
+      ul li {
+        width: 73.94%;
+        height: 29.333px;
+        text-transform: none;
+      }
+      ul li:first-child {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 45px;
+        font-size: 16px;
+      }
+    }
+    ul li &__price {
+      display: inline;
+      font-size: $font-size18;
+    }
+    &__controls {
+      display: none;
+    }
+
+
+  }
+
+  #btn-2:checked~ .packages-slider__inner .packages-slider__slides {
+    transform: translate(0);
+  }
+
+
+
+
+
+
 }

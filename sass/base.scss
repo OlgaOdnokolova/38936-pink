@@ -1,7 +1,8 @@
 @import "variables";
 
 body {
-  width: 320px;
+  //width: 320px;
+  width: 700px;
   margin: 0;
   font-family: $font-family-base;
   font-size: $font-size-base;
@@ -17,8 +18,9 @@ ul{
 }
 
 .container {
-  width: 280px;
-  padding: 0 20px;
+  //width: 280px;
+  width: 87.5%;
+  padding: 0;
   margin: 0 auto;
 }
 
@@ -46,10 +48,13 @@ p {
 .main-menu {
   float: right;
   display: block;
-  width: 50px;
-  height: 25px;
+  //width: 50px;
+  width: 15.6%;
+  //height: 25px;
+  height: 7.8%;
   text-indent: 3000px;
-  background: url("../img/icon-header_menu.png") no-repeat;
+  //background: url("../img/icon-header_menu.png") no-repeat;
+  background-color: #fff;
 }
 
 .main-nav {
@@ -101,7 +106,7 @@ p {
 .intro {
   padding-top: 95px;
   min-height: 140px;
-  background: url("../img/bg-intro.jpg") no-repeat;
+  background: url("../img/background-mobile@1x.jpg") no-repeat;
   &__slogan {
     font-size: 24px;
     line-height: $line-height30;
@@ -139,5 +144,19 @@ p {
 }
 
 .developed-by {
+
+}
+
+
+@media (min-width: 620px) {
+  .container {
+    width: 88.57%;
+    padding: 0 5.7%;
+    margin: 0 auto;
+  }
+
+  .main-header {
+    padding: 34px 0;
+  }
 
 }
