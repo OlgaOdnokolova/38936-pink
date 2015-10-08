@@ -11,9 +11,13 @@
     text-align: center;
     font-size: $font-size-base;
     line-height: $line-height30;
+    span {
+      display: none;
+    }
   }
   label {
-    padding-left: 22px;
+    //padding-left: 22px;
+    padding-left: 7.5%;
     margin-bottom: 7px;
     line-height: $line-height30;
     color: $text-color-red;
@@ -26,6 +30,15 @@
     margin-bottom: 17px;
     font-size: $font-size18;
     border: $form-grey-border;
+  }
+}
+
+.fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  &__legend {
+    display: none;
   }
 }
 
@@ -85,16 +98,18 @@
   input[type="text"] {
     display: inline-block;
     vertical-align: top;
-    padding: 19px 0;
-    width: 156px;
+    padding: 17.5px 0;
+    //width: 156px;
+    width: 55.7%;
     text-align: center;
   }
   &__add, &__remove {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 58px;
-    min-height: 62px;
+    //width: 58px;
+    width: 20.7%;
+    min-height: 59px;
     border: $form-grey-border;
     font-size: $font-size18;
     cursor: pointer;
@@ -124,9 +139,11 @@
     content: " ";
     position: absolute;
     top: 200px;
-    left: 20px;
+    left: 50%;
+    margin-left: -43.75%;
     height: 2px;
-    width: 280px;
+    //width: 280px;
+    width: 87.5%;
     background-color: #e5e5e5;
   }
   &__title {
@@ -142,7 +159,8 @@
     vertical-align: top;
     padding: 19px 0;
     margin-bottom: 48px;
-    width: 156px;
+    //width: 156px;
+    width: 55.7%;
     text-align: center;
     font-size: $font-size18;
     border: $form-grey-border;
@@ -152,7 +170,8 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 58px;
+    //width: 58px;
+    width: 20.7%;
     min-height: 62px;
     border: $form-grey-border;
     font-size: $font-size18;
@@ -181,7 +200,8 @@
   label{
     position: relative;
     display: block;
-    padding-left: 85px;
+    //padding-left: 85px;
+    padding-left: 30.4%;
     padding-bottom: 15px;
     font-size: $font-size-base;
     color: $text-color-red;
@@ -198,6 +218,8 @@
   input {
     display: inline-block;
     vertical-align: top;
+    box-sizing: border-box;
+    width: 79%;
     padding: 17px 0 17px 22px;
     margin-bottom: 18px;
     font-size: $font-size18;
@@ -205,13 +227,15 @@
     background-color: $first-bg;
   }
   input:last-of-type {
-    margin-left: 60px;
+    //margin-left: 60px;
+    margin-left: 21.4%;
   }
   &__number {
     display: inline-block;
     vertical-align: top;
     padding: 23px 0;
-    width: 58px;
+    //width: 58px;
+    width: 20%;
     height: 12px;
     line-height: 12px;
     font-size: $font-size18;
@@ -219,6 +243,10 @@
     border: $form-grey-border;
     border-right: none;
   }
+}
+
+input[name="delete"] {
+  display: none;
 }
 
 .travel-achievements {
@@ -238,7 +266,8 @@
     position: relative;
     display: block;
     margin-bottom: 43px;
-    padding: 10px 0 10px 60px;
+    //padding: 10px 0 10px 60px;
+    padding: 10px 0 10px 21.4%;
     font-size: $font-size18;
     cursor: pointer;
   }
@@ -263,9 +292,10 @@
     content: " ";
     position: absolute;
     top: 150px;
-    left: 20px;
+    left: 50%;
+    margin-left: -43.75%;
     height: 2px;
-    width: 280px;
+    width: 87.5%;
     background-color: #e5e5e5;
   }
   &__title {
@@ -273,6 +303,7 @@
     margin-bottom: 36px;
   }
   input[type="file"] {
+    width: 100%;
     margin-bottom: 50px;
   }
   &__wrapper-photos {
@@ -284,6 +315,7 @@
     display: inline-block;
     vertical-align: top;
     margin-right: 39px;
+    margin-bottom: 25px;
   }
   &__small-photo::before {
     content: " ";
@@ -301,7 +333,6 @@
   &__photo-name {
     font-size: 12px;
     text-transform: uppercase;
-    margin-bottom: 25px;
   }
 }
 
@@ -331,6 +362,167 @@
       color: $text-color-red;
     }
   }
+}
+
+
+@media (min-width: 700px) {
+
+  .personal-data {
+    padding-top: 100px;
+    &__text {
+      width: 80.5%;
+      margin: 0 auto;
+      margin-bottom: 36px;
+      font-size: $font-size18;
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .fieldset {
+    border: $form-grey-border;
+    border-radius: 3px;
+    padding-left: 9.5%;
+    &--pt42 {
+      padding-top: 42px;
+    }
+    &--pt52 {
+      padding-top: 52px;
+    }
+    &__legend {
+      display: inline-block;
+      text-align: center;
+      @include form-block-title;
+    }
+  }
+
+  .what-app {
+    &--bg {
+      background-color: $first-bg;
+    }
+    &__title {
+      display: none;
+    }
+    label {
+      padding: 12px 0 12px 11%;
+    }
+  }
+
+  .traveling-time {
+    padding-top: 52px;
+    padding-bottom: 0;
+    &__title {
+      display: none;
+    }
+    &__inner {
+      display: inline-block;
+      vertical-align: top;
+      width: 43.3%;
+      &--mr {
+        margin-right: 3.5%;
+      }
+    }
+  }
+
+  .fellow-travelers {
+    &::before {
+      width: 71%;
+      margin-left: -35.5%;
+    }
+
+    &--bg {
+      background-color: $first-bg;
+    }
+    &__title {
+      display: none;
+    }
+    &__number {
+      width: 50%;
+    }
+    input[type="number"] {
+      background-color: $first-bg;
+    }
+  }
+
+  .traveler-wrapper {
+    @include clearfix;
+    width: 100%;
+  }
+
+  input[name="delete"] {
+    display: block;
+    margin-top: 88px;
+    font-size: $font-size-base;
+    border: none;
+    background-color: $first-bg;
+    text-transform: uppercase;
+  }
+
+  .traveler {
+    width: 72%;
+    float: left;
+    margin-right: 4.5%;
+    &__number {
+      width: 15%;
+      margin-right: 5%;
+      border-right: 2px solid $color-grey ;
+      background-color: $second-bg;
+    }
+    label {
+      padding-left: 26.4%;
+    }
+  }
+
+  .travel-achievements {
+    &__title {
+      display: none;
+    }
+    input[type="checkbox"]+label {
+      padding: 10px 0 10px 11%;
+    }
+  }
+
+  .download-photos {
+    &::before {
+      width: 71%;
+      margin-left: -35.5%;
+    }
+    &__title {
+      display: none;
+    }
+    &--bg {
+      background-color: $first-bg;
+    }
+    &__wrapper-photos {
+      margin-right: -3%;
+    }
+    &__small-photo {
+      width: 20.9%;
+      margin-right: 12.2%;
+      outline: 1px solid grey;
+    }
+  }
+
+  .form-btn {
+    .container::after {
+      @include clearfix;
+    }
+    button[type="submit"] {
+      float: left;
+      width: 48%;
+    }
+    &__text-under {
+      float: right;
+      margin-top: 20px;
+    }
+  }
+
+
+
+
+
+
 }
 
 
