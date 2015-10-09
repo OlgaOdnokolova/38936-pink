@@ -225,16 +225,10 @@
       cursor: pointer;
     }
   }
-  &--desc {
-    display: none;
-  }
-  &--mob {
-    display: block;
-  }
   &__inner {
     overflow: hidden;
   }
-  &__slides{
+  &__slides {
     position: relative;
     width: 300%;
     transition: transform .8s ease;
@@ -247,10 +241,13 @@
       border-right: $form-grey-border;
       //box-shadow: inset 0px 0px 0px 2px #ABABAB;
     }
-    ul:nth-child(1) {
+    ul:first-child {
+      display: none;
+    }
+    ul:nth-child(2) {
       border-left: $form-grey-border;
     }
-    ul:nth-child(2)::before {
+    ul:nth-child(3)::before {
       content: "Хит";
       display: table;
       position: absolute;
@@ -367,6 +364,13 @@
   &--bg{
     background-color: $first-bg;
   }
+}
+
+.map {
+  width: 100%;
+  height: 35.21vh;
+  background-image: url("../img/map.jpg");
+  background-size: cover;
 }
 
 
@@ -507,10 +511,15 @@
       top: -7.5625%;
       left: 0;
     }
-    &--desc {
-      display: block;
+    &__inner {
+      width: 88.57%;
+      padding: 0 5.7%;
+      margin: 0 auto;
     }
-    &--mob {
+    &__text {
+      display: none;
+    }
+    &__controls {
       display: none;
     }
     &__slides::after {
@@ -538,7 +547,8 @@
         display: none;
       }
       ul:first-of-type {
-        border-left: none;
+        display: block;
+        border-right: none;
         li:first-child {
           background-color: $second-bg;
           border-left: none;
@@ -582,6 +592,11 @@
       font-size: $font-size18;
     }
 
+  }
+
+  #btn-2:checked~ .packages-slider__inner .packages-slider__slides {
+    //transform: translate(-260px);
+    transform: translate(0);
   }
 
   .contacts {
