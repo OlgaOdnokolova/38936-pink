@@ -1,7 +1,7 @@
 @import "variables";
 
 body {
-  width: 320px;
+  min-width: 320px;
   margin: 0;
   font-family: $font-family-base;
   font-size: $font-size-base;
@@ -17,8 +17,9 @@ ul{
 }
 
 .container {
-  width: 280px;
-  padding: 0 20px;
+  //width: 280px;
+  width: 87.5%;
+  padding: 0;
   margin: 0 auto;
 }
 
@@ -28,6 +29,7 @@ p {
 }
 
 .main-header {
+  width: 100%;
   position: fixed;
   top: 0;
   padding: 20px 0;
@@ -46,10 +48,12 @@ p {
 .main-menu {
   float: right;
   display: block;
-  width: 50px;
+  //width: 50px;
+  width: 15.6%;
   height: 25px;
   text-indent: 3000px;
-  background: url("../img/icon-header_menu.png") no-repeat;
+  //background: url("../img/icon-header_menu.png") no-repeat;
+  background-color: #fff;
 }
 
 .main-nav {
@@ -64,7 +68,7 @@ p {
     a{
       display: block;
       padding: 20px 0;
-      font-size: 18px;
+      font-size: $font-size18;
       line-height: 32px;
       font-weight: 600;
       text-align: center;
@@ -99,9 +103,10 @@ p {
 }
 
 .intro {
+  position: relative;
   padding-top: 95px;
-  min-height: 140px;
-  background: url("../img/bg-intro.jpg") no-repeat;
+  background-image: url("../img/background-mobile@1x.jpg");
+  background-position: top;
   &__slogan {
     font-size: 24px;
     line-height: $line-height30;
@@ -109,10 +114,17 @@ p {
     color: $promo-text-color;
     text-align: center;
   }
+  &__slogan--inner {
+    padding-bottom: 57px;
+  }
 }
 
-.inner-footer {
+.main-footer {
   padding-bottom: 45px;
+}
+
+.main-footer--index {
+  display: none;
 }
 
 .logo-var2 {
@@ -139,5 +151,69 @@ p {
 }
 
 .developed-by {
+  text-align: center;
+}
+
+.map img {
+  display: block;
+}
+
+
+@media (min-width: 700px) {
+  .container {
+    width: 88.57%;
+    padding: 0 5.7%;
+    margin: 0 auto;
+  }
+
+  .main-header {
+    padding: 34px 0;
+  }
+
+  .inner .intro {
+    padding-top: 185px;
+  }
+
+  .intro__slogan--inner {
+    padding-bottom: 85px;
+    width: 80.5%;
+    margin: 0 auto;
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .main-footer {
+    .container::after {
+      @include clearfix;
+    }
+    padding-top: 36px;
+    padding-bottom: 35px;
+  }
+
+  .logo-var2 {
+    float: left;
+    width: 26%;
+    margin-bottom: 0;
+    margin-right: 9.5%;
+  }
+
+  .main-footer--index {
+    display: block;
+  }
+
+  .social {
+    float: left;
+    width: 29%;
+    margin-bottom: 0;
+    margin-right: 9.5%;
+    &__btn {
+      margin-right: 8px;
+    }
+  }
+
+  .developed-by {
+    float: left;
+    width: 26%;
+  }
 
 }
