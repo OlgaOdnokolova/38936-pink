@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <title>Pink-Главная страница</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,800&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>  <link href="css/normalize.css" type="text/css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,800&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link href="css/normalize.css" type="text/css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -33,18 +34,35 @@
 
 <main class="index-main">
 
-  <div class="intro  intro--index">
+  <div class="intro">
     <div class="container">
-      <p class="intro__slogan">Взгляните на жизнь иначе!</p>
+      <p class="intro__slogan intro__slogan--index">Взгляните на жизнь иначе!</p>
     </div>
-  </div>
-
-  <div class="download-app  download-app--bg">
-    <div class="container">
+    <div class="download-app  download-app--bg">
       <a class="download-app__btn" href="#">Скачать приложение</a>
-      <a class="download-app__platform" href="#"><img src="img/icon-apple.png" width="46" height="57" alt="platform-apple"></a>
-      <a class="download-app__platform" href="#"><img src="img/icon-android.png" width="42" height="47" alt="platform-android"></a>
-      <a class="download-app__platform  download-app__platform--last" href="#"><img src="img/icon-microsoft.png" width="44" height="42" alt="platform-microsoft"></a>
+      <a class="download-app__platform" href="#">
+        <svg class="apple-logo" xmlns="http://www.w3.org/2000/svg" width="46.21px" height="56.753px" viewBox="0 0 46.21 56.753">
+          <path fill="#FFFFFF" d="M38.593,30.15c0.081,8.59,7.535,11.447,7.617,11.483c-0.062,0.202-1.19,4.073-3.927,8.072c-2.365,3.457-4.82,6.901-8.688,6.973c-3.799,0.07-5.021-2.253-9.365-2.253c-4.344,0-5.702,2.182-9.298,2.323c-3.733,0.142-6.576-3.739-8.961-7.184c-4.875-7.046-8.598-19.91-3.597-28.593c2.484-4.313,6.925-7.043,11.743-7.114c3.666-0.069,7.126,2.466,9.366,2.466c2.241,0,6.444-3.049,10.865-2.601c1.85,0.077,7.044,0.747,10.38,5.629C44.459,19.519,38.531,22.971,38.593,30.15 M31.453,9.062C33.435,6.662,34.769,3.323,34.405,0c-2.857,0.115-6.312,1.904-8.36,4.302c-1.837,2.123-3.445,5.521-3.011,8.778C26.218,13.326,29.47,11.461,31.453,9.062"/>
+        </svg>
+      </a>
+      <a class="download-app__platform" href="#">
+        <svg class="android-logo" xmlns="http://www.w3.org/2000/svg" width="42.084px" height="47.041px" viewBox="0 0 42.084 47.041">
+          <path fill="#A4C639" d="M34.144,14.009H7.945c-0.009,0.11-0.018,0.22-0.018,0.333v18.754c0,1.926,1.457,3.491,3.316,3.628v7.433c0,1.594,1.291,2.885,2.885,2.885c1.593,0,2.885-1.291,2.885-2.885v-7.419h8.058v7.419c0,1.594,1.292,2.885,2.885,2.885c1.595,0,2.886-1.291,2.886-2.885v-7.433c1.858-0.137,3.315-1.702,3.315-3.628V14.342C34.157,14.229,34.153,14.119,34.144,14.009z"/>
+          <path id="c-4-9-2-9-2-9" fill="#A4C639" d="M2.886,15.679L2.886,15.679c1.593,0,2.886,1.292,2.886,2.885v12.378c0,1.595-1.292,2.886-2.886,2.886l0,0C1.292,33.828,0,32.537,0,30.942V18.564C0,16.97,1.292,15.679,2.886,15.679z"/>
+          <path id="c-4-1-7-3-8-4" fill="#A4C639" d="M39.198,15.679L39.198,15.679c1.595,0,2.886,1.292,2.886,2.885v12.378c0,1.595-1.291,2.886-2.886,2.886l0,0c-1.594,0-2.885-1.291-2.885-2.886V18.564C36.313,16.97,37.604,15.679,39.198,15.679z"/>
+          <path fill="#A4C639" d="M8.03,11.967h26.025c-0.039-2.783-1.234-5.322-3.186-7.275l2.446-4.235c0.082-0.146,0.032-0.331-0.112-0.415c-0.146-0.084-0.331-0.034-0.415,0.111L30.416,4.26c-2.052-1.853-4.821-3.101-7.924-3.4h-2.9c-3.102,0.299-5.872,1.547-7.924,3.4L9.296,0.152C9.213,0.007,9.027-0.042,8.881,0.041C8.736,0.125,8.686,0.311,8.77,0.456l2.445,4.235C9.265,6.645,8.068,9.184,8.03,11.967z M25.323,6.804c-0.002-0.805,0.664-1.46,1.489-1.462c0.825-0.002,1.494,0.648,1.497,1.454c0,0.002,0,0.005,0,0.008c0.002,0.805-0.664,1.46-1.489,1.462c-0.824,0.002-1.494-0.649-1.497-1.454C25.323,6.81,25.323,6.807,25.323,6.804z M14.18,6.804c-0.001-0.805,0.665-1.46,1.489-1.462c0.824-0.002,1.494,0.648,1.497,1.454c0,0.002,0,0.005,0,0.008c0.002,0.805-0.664,1.46-1.488,1.462c-0.825,0.002-1.495-0.649-1.498-1.454C14.18,6.81,14.18,6.807,14.18,6.804z"/>
+        </svg>
+      </a>
+      <a class="download-app__platform  download-app__platform--last" href="#">
+        <svg class="microsoft-logo" xmlns="http://www.w3.org/2000/svg" width="43.922px" height="41.992px" viewBox="0 0 43.922 41.992">
+          <g>
+            <path id="path5058" fill="#F05423" d="M20.874,19.953H0V0h20.874V19.953z"/>
+            <path id="path5060" fill="#84C441" d="M43.922,19.953H23.049V0h20.873V19.953z"/>
+            <path id="path5062" fill="#2DABE2" d="M20.873,41.992H0V22.04h20.873V41.992z"/>
+            <path id="path5064" fill="#F9BC15" d="M43.922,41.992H23.049V22.04h20.873V41.992z"/>
+          </g>
+        </svg>
+      </a>
       <p class="download-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
     </div>
   </div>
@@ -77,6 +95,15 @@
 
   <div class="comments-slider  comments-slider--bg">
     <div class="container">
+      <section class="app-effect">
+        <svg class="watch" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298.001 345.097">
+          <path d="M293.057,157.98c-5.442-20.657-15.198-39.563-28.273-55.688l8.567-8.563c6.074-6.077,6.074-15.928,0-21.999c-3.334-3.34-7.78-4.656-12.129-4.333c-3.596,0.254-7.146,1.596-9.866,4.333l-8.563,8.56c-9.083-7.354-19.081-13.552-29.734-18.627c-9.617-4.558-19.751-8.195-30.338-10.669c-0.089-0.016-0.205-0.016-0.311-0.038c-4.587-1.065-9.204-1.985-13.962-2.613v-7.98V40.21v-1.306h6.879c10.737,0,19.446-8.709,19.446-19.474c0-10.724-8.709-19.43-19.446-19.43h-6.879h-38.891h-8.062c-1.713,0-3.356,0.288-4.96,0.697c0,0-0.009,0.029-0.02,0.029c-8.326,2.202-14.463,9.715-14.463,18.704c0,10.765,8.709,19.474,19.442,19.474h8.062v9.439C79.47,54.876,37.337,86.339,15.7,129.791c-4.32,8.658-7.893,17.745-10.454,27.238C1.846,169.485,0,182.555,0,196.089c0,64.417,40.952,119.159,98.227,139.946c15.871,5.734,32.922,9.062,50.772,9.062c7.435,0,14.736-0.559,21.853-1.633c0.762-0.096,1.484-0.321,2.251-0.451c20.966-3.432,40.528-11.17,57.596-22.392c23.571-15.496,42.378-37.464,54.081-63.389c8.424-18.701,13.222-39.326,13.222-61.144C298.001,182.92,296.276,170.153,293.057,157.98z M226.848,273.943c-14.194,14.189-31.581,23.877-50.54,28.735c-6.501,1.626-13.258,2.51-20.067,2.966c-0.971,0.061-1.881,0.23-2.845,0.241c-1.476,0.072-2.916,0.298-4.396,0.298c-4.044,0-8.062-0.26-12.034-0.688c-24.859-2.698-47.885-13.609-65.823-31.552c-20.794-20.793-32.258-48.454-32.258-77.854c0-2.328,0.198-4.599,0.334-6.896c1.659-26.815,12.766-51.821,31.924-70.969c2.383-2.372,4.875-4.595,7.421-6.736l0.016-0.013c19.75-16.48,44.379-25.5,70.421-25.5c4.758,0,9.438,0.327,14.051,0.929c14.462,1.872,28.247,6.572,40.743,13.759c0.136,0.083,0.286,0.184,0.409,0.279c8.15,4.745,15.798,10.447,22.646,17.282c1.608,1.621,3.067,3.334,4.549,5.031c0.054,0.054,0.104,0.12,0.167,0.184c3.025,3.447,5.729,7.142,8.292,10.888c1.629,2.442,3.264,4.894,4.694,7.431c8.845,15.449,13.851,32.852,14.386,51.07c0.038,1.088,0.152,2.147,0.152,3.261C259.088,225.489,247.645,253.15,226.848,273.943z"/>
+        </svg>
+        <div class="app-effect__title">Эффект на 24 часа!</div>
+        <p class="app-effect__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+        <a href="#" class="app-effect__link">Узнать больше об исследовании</a>
+      </section>
+
       <input type="radio" id="btn-01" name="toggle1" checked>
       <input type="radio" id="btn-02" name="toggle1">
       <input type="radio" id="btn-03" name="toggle1">
@@ -87,69 +114,104 @@
       </div>
       <div class="comments-slider__slides">
         <div class="comments-slider__slide">
-          <div class="comments-slider__slide-title">Николай Петров</div>
+          <div class="comments-slider__slide-title comments-slider__slide-title--mob">Николай Петров
+            <div>25 лет, водитель трамвая</div>
+          </div>
           <p class="comments-slider__slide-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
             А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
+          <div class="comments-slider__slide-title comments-slider__slide-title--desc">Николай Петров
+            <div>25 лет, водитель трамвая</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="packages-slider  packages-slider--bg">
-    <!--<div class="container">-->
-      <input type="radio" id="btn-1" name="toggle2">
-      <input type="radio" id="btn-2" name="toggle2" checked>
-      <input type="radio" id="btn-3" name="toggle2">
-      <div class="packages-slider__controls">
-        <label for="btn-1"></label>
-        <label for="btn-2"></label>
-        <label for="btn-3"></label>
+  <div class="packages-slider  packages-slider--bg  packages-slider--mob">
+    <input type="radio" id="btn-1" name="toggle2">
+    <input type="radio" id="btn-2" name="toggle2" checked>
+    <input type="radio" id="btn-3" name="toggle2">
+    <div class="packages-slider__controls">
+      <label for="btn-1"></label>
+      <label for="btn-2"></label>
+      <label for="btn-3"></label>
+    </div>
+
+    <div class="packages-slider__inner">
+      <div class="packages-slider__slides">
+
+        <ul>
+          <li></li>
+          <li>Розовый фильтр</li>
+          <li>Смайлики</li>
+          <li>Комментарии</li>
+        </ul>
+
+        <ul>
+          <li>База<br><span class="packages-slider__price">1,99 USD</span></li>
+          <li><span class="packages-slider__text">Розовый фильтр</span></li>
+          <li><span class="packages-slider__text">Смайлики</span></li>
+          <li><span class="packages-slider__text">Комментарии</span></li>
+        </ul>
+
+        <ul>
+          <li>Стандарт<br><span class="packages-slider__price">3,99 USD</span></li>
+          <li><span class="packages-slider__text">Розовый фильтр</span></li>
+          <li><span class="packages-slider__text">Смайлики</span></li>
+          <li><span class="packages-slider__text">Комментарии</span></li>
+        </ul>
+
+        <ul>
+          <li>Анлим<br><span class="packages-slider__price">9,99 USD</span></li>
+          <li><span class="packages-slider__text">Розовый фильтр</span></li>
+          <li><span class="packages-slider__text">Смайлики</span></li>
+          <li><span class="packages-slider__text">Комментарии</span></li>
+        </ul>
+
       </div>
-      <div class="packages-slider__inner">
-        <div class="packages-slider__slides">
-          <ul>
-            <li>База<br><span>1,99 USD</span></li>
-            <li>Розовый фильтр</li>
-            <li>Смайлики</li>
-            <li>Комментарии</li>
-          </ul>
-          <ul>
-            <li>Стандарт<br><span>3,99 USD</span></li>
-            <li>Розовый фильтр</li>
-            <li>Смайлики</li>
-            <li>Комментарии</li>
-          </ul>
-          <ul>
-            <li>Анлим<br><span>9,99 USD</span></li>
-            <li>Розовый фильтр</li>
-            <li>Смайлики</li>
-            <li>Комментарии</li>
-          </ul>
-        </div>
-      </div>
-    <!--</div>-->
+    </div>
+
   </div>
 
   <div class="contacts  contacts--bg">
     <div class="container">
-      <p class="contacts__promo">Остались вопросы? Свяжитесь с нами!</p>
-      <div class="contacts__title">Звоните:</div>
-      <a class="contacts__contact" href="tel:+78125556666">+7 (812) 555-66-66</a>
-      <div class="contacts__title">Пишите:</div>
-      <a class="contacts__contact" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      <div class="contacts__title">Приезжайте в гости:</div>
-      <div class="contacts__contact">ул. Большая Конюшенная, 19/8</div>
+      <p class="contacts__promo">Остались вопросы?<br>Свяжитесь с нами!</p>
+
+      <div class="contacts__inner">
+        <div class="contacts__title">Звоните:</div>
+        <a class="contacts__contact" href="tel:+78125556666">+7 (812) 555-66-66</a>
+      </div>
+
+      <div class="contacts__inner">
+        <div class="contacts__title">Пишите:</div>
+        <a class="contacts__contact" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </div>
+
+      <div class="contacts__inner">
+        <div class="contacts__title">Приезжайте в гости:</div>
+        <div class="contacts__contact">ул. Большая Конюшенная, 19/8</div>
+      </div>
+
     </div>
   </div>
+
+  <div class="map"></div>
 </main>
 
-<footer class="index-footer">
-  <div class="index-footer__map">
-    <img src="img/img-small_map.jpg" width="320" height="200" alt="map">
+<footer class="main-footer  main-footer--index">
+  <div class="container">
+    <div class="logo-var2">
+      <a href="#"><img src="img/logo-var2.png" width="145" height="40" alt="Logo"></a>
+    </div>
+    <div class="social">
+      <a class="social__btn  social__btn--twitter" href="#"></a>
+      <a class="social__btn  social__btn--facebook" href="#"></a>
+      <a class="social__btn  social__btn--youtube" href="#"></a>
+    </div>
+    <div class="developed-by">Разработано</div>
   </div>
 </footer>
-
 <!-- <script src="js/script.js"></script> -->
 
 </body>
