@@ -50,6 +50,22 @@
   }
 }
 
+//иконки apple, android, microsoft
+.apple-logo {
+  width: 46.21px;
+  height: 56.753px;
+}
+
+.android-logo {
+  width: 42.084px;
+  height: 47.041px;
+}
+
+.microsoft-logo {
+  width: 43.922px;
+  height: 41.992px;
+}
+
 .promo-questions{
   padding-bottom: 20px;
   padding-top: 45px;
@@ -273,16 +289,6 @@
       background-color: #ffffff;
       border-bottom: 2px solid #e5e5e5;
     }
-    ul li::after{
-      content: " ";
-      display: table;
-      position: absolute;
-      width: 35px;
-      height: 35px;
-      right: 10px;
-      bottom: 15px;
-      background-color: #0b97c4;
-    }
     ul li:first-child{
       text-align: center;
       padding: 22px 0;
@@ -298,6 +304,21 @@
     ul li:first-child::after{
       display: none;
     }
+  }
+  &__icon {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+  }
+  &__icon--yes {
+    width: 29px;
+    height: 24px;
+    fill: #42c849;
+  }
+  &__icon--no {
+    width: 27px;
+    height: 27px;
+    fill: #f25b26;
   }
   &__price {
     display: inline;
@@ -369,7 +390,7 @@
 .map {
   width: 100%;
   height: 35.21vh;
-  background-image: url("../img/map.jpg");
+  background-image: url("../img/map-mobile.jpg");
   background-size: cover;
 }
 
@@ -591,7 +612,21 @@
       display: block;
       font-size: $font-size18;
     }
-
+    &__icon {
+      right: 50%;
+      margin-right: -15px;
+      bottom: 12px;
+    }
+    &__icon--yes {
+      width: 29px;
+      height: 24px;
+      fill: #42c849;
+    }
+    &__icon--no {
+      width: 27px;
+      height: 27px;
+      fill: #f25b26;
+    }
   }
 
   #btn-2:checked~ .packages-slider__inner .packages-slider__slides {
@@ -618,10 +653,18 @@
     }
   }
 
-  .map img {
-    width: 700px;
-    height: 378px;
+  .map {
+    height: 36.91vh;
+    background-image: url("../img/map-tablet.jpg");
   }
+
+
+}
+
+@media (min-width: 960px) {
+
+
+
 
 
 }

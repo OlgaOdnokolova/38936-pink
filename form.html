@@ -11,21 +11,47 @@
 
 <body>
 
+<svg style="display: none;" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="main-menu" viewBox="0 0 49.945 24.007">
+    <path id="path-1" fill="#231F20" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.138,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98c0,0.557,0.494,1.01,1.138,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137zM1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.138,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
+    <path id="path-1_1_" fill="#231F20" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.138,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98c0,0.557,0.494,1.01,1.138,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137zM1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.138,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
+  </symbol>
+  <symbol id="red-dot" viewBox="0 0 35.983 35.983">
+    <circle fill="#FFFFFF" cx="17.991" cy="17.991" r="17.991"/>
+    <circle fill="#D22856" cx="17.991" cy="17.991" r="7.866"/>
+  </symbol>
+  <symbol id="icon-yes" viewBox="0 0 30.375 21.688">
+    <path d="M29.936,0.439c-0.586-0.586-1.535-0.586-2.121,0L10.188,18.066l-7.627-7.627c-0.586-0.586-1.535-0.586-2.121,0s-0.586,1.535,0,2.121l8.688,8.688c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439L29.936,2.561C30.521,1.975,30.521,1.025,29.936,0.439z"/>
+  </symbol>
+  <symbol id="icon-no" viewBox="0 0 26.752 26.752">
+    <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
+  </symbol>
+  <symbol id="icon-twitter" viewBox="0 0 17.5 14.663">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
+  </symbol>
+  <symbol id="icon-facebook" viewBox="0 0 8.673 18.944">
+    <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786C5.765,5.07,5.75,3.709,6.275,3.357z"/>
+  </symbol>
+  <symbol id="icon-youtube" viewBox="0 0 14.64 13.96">
+    <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
+  </symbol>
+</svg>
+
 <header class="main-header">
   <div class="container">
-    <div class="logo">
-      <a href="#"><img src="img/img-logo.png" width="74" height="23" alt="Logo"></a>
-    </div>
-    <a class="main-menu">Меню</a>
-    <nav class="main-nav">
+    <a class="logo" href="#"></a>
+    <a href="#main-nav" class="nav-btn" title="Jump to navigation" role="button">
+      <svg class="main-menu"><use xlink:href="#main-menu"></svg>
+    </a>
+    <nav id="main-nav" class="main-nav" role="navigation">
       <ul>
-        <li class="main-nav__element"><img src="img/img-logo.png" width="74" height="23" alt="Logo"></li>
         <li class="main-nav__element"><a href="#">Информация</a></li>
         <li class="main-nav__element"><a href="#">Блог</a></li>
         <li class="main-nav__element"><a href="#">Отзывы</a></li>
         <li class="main-nav__element"><a href="#">Конкурс</a></li>
       </ul>
     </nav>
+    <a href="#top" class="nav-close" role="button" title="Jump back to the start of the document"></a>
   </div>
 </header>
 
@@ -40,16 +66,23 @@
 
     <div class="personal-data  personal-data--bg">
       <div class="container">
-        <p class="personal-data__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span>Пожалуйста, заполните форму ниже:</span></p>
+        <p class="personal-data__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span> Пожалуйста, заполните форму ниже:</span></p>
 
-        <label for="name">Имя: *</label>
-        <input id="name" type="text" name="name" placeholder="Введите ваше имя" required>
+        <div class="personal-data__block">
+          <label for="name">Имя: *</label>
+          <input id="name" type="text" name="name" placeholder="Введите ваше имя" required>
+        </div>
 
-        <label for="surname">Фамилия: *</label>
-        <input id="surname" type="text" name="surname" placeholder="Укажите фамилию" required>
+        <div class="personal-data__block">
+          <label for="surname">Фамилия: *</label>
+          <input id="surname" type="text" name="surname" placeholder="Укажите фамилию" required>
+        </div>
 
-        <label for="patronymic">Отчество:</label>
-        <input id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+        <div class="personal-data__block">
+          <label for="patronymic">Отчество:</label>
+          <input id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+        </div>
+
       </div>
     </div>
 
@@ -59,14 +92,20 @@
           <legend class="fieldset__legend">С каким приложением путешествовали? *</legend>
           <div class="what-app__title">С каким приложением путешествовали? *</div>
 
-          <input id="iOS" type="radio" value="iOS" name="app-kind" checked>
-          <label for="iOS">Pink для iOS</label>
+          <div class="what-app__block">
+            <input id="iOS" type="radio" value="iOS" name="app-kind" checked>
+            <label for="iOS"><svg class="what-app__red-dot"><use xlink:href="#red-dot"></use></svg>Pink для iOS</label>
+          </div>
 
-          <input id="android" type="radio" value="android" name="app-kind">
-          <label for="android">Pink на Android</label>
+          <div class="what-app__block">
+            <input id="android" type="radio" value="android" name="app-kind">
+            <label for="android"><svg class="what-app__red-dot"><use xlink:href="#red-dot"></use></svg>Pink на Android</label>
+          </div>
 
-          <input id="windows-phone" type="radio" value="windows-phone" name="app-kind">
-          <label for="windows-phone">Windows Phone</label>
+          <div class="what-app__block">
+            <input id="windows-phone" type="radio" value="windows-phone" name="app-kind">
+           <label for="windows-phone"><svg class="what-app__red-dot"><use xlink:href="#red-dot"></use></svg>Windows Phone</label>
+          </div>
         </fieldset>
       </div>
     </div>
@@ -113,24 +152,34 @@
 
           <div class="traveler-wrapper">
             <div class="traveler">
-              <label for="traveler-name1">Имя: *</label>
-              <div class="traveler__number">1</div>
-              <input type="text" id="traveler-name1" name="traveler-name1" placeholder="Введите ваше имя" required>
 
-              <label for="nickname1">Прозвище:</label>
-              <input type="text" id="nickname1" name="nickname1" placeholder="Ну как же без этого!">
+              <div class="traveler__block">
+                <label for="traveler-name1">Имя: *</label>
+                <div class="traveler__number">1</div>
+                <input type="text" id="traveler-name1" name="traveler-name1" placeholder="Введите ваше имя" required>
+              </div>
+
+              <div class="traveler__block">
+                <label for="nickname1">Прозвище:</label>
+                <input type="text" id="nickname1" name="nickname1" placeholder="Ну как же без этого!">
+              </div>
             </div>
             <input type="button" value="Удалить" name="delete">
           </div>
 
           <div class="traveler-wrapper">
             <div class="traveler">
-              <label for="traveler-name2">Имя: *</label>
-              <div class="traveler__number">2</div>
-              <input type="text" id="traveler-name2" name="traveler-name2" placeholder="Введите ваше имя" required>
 
-              <label for="nickname2">Прозвище:</label>
-              <input type="text" id="nickname2" name="nickname2" placeholder="Ну как же без этого!">
+              <div class="traveler__block">
+                <label for="traveler-name2">Имя: *</label>
+                <div class="traveler__number">2</div>
+                <input type="text" id="traveler-name2" name="traveler-name2" placeholder="Введите ваше имя" required>
+              </div>
+
+              <div class="traveler__block">
+               <label for="nickname2">Прозвище:</label>
+                <input type="text" id="nickname2" name="nickname2" placeholder="Ну как же без этого!">
+              </div>
             </div>
             <input type="button" value="Удалить" name="delete">
           </div>
@@ -145,23 +194,28 @@
           <legend class="fieldset__legend">Ваши безбашенные достижения в путешествии</legend>
           <div class="travel-achievements__title">Ваши безбашенные достижения в путешествии</div>
 
-          <input id="selfi-with-shark" type="checkbox" name="selfi-with-shark" checked>
-          <label for="selfi-with-shark">Сделал селфи с акулой</label>
+          <div class="travel-achievements__block  travel-achievements__block--width1">
+            <input id="selfi-with-shark" type="checkbox" name="selfi-with-shark" checked>
+            <label for="selfi-with-shark"><svg class="travel-achievements__yes"><use xlink:href="#icon-yes"></svg>Сделал селфи с акулой</label>
 
-          <input id="burned-on-beach" type="checkbox" name="burned-on-beach" checked>
-          <label for="burned-on-beach">Обгорел на пляже</label>
+            <input id="burned-on-beach" type="checkbox" name="burned-on-beach" checked>
+           <label for="burned-on-beach"><svg class="travel-achievements__yes"><use xlink:href="#icon-yes"></svg>Обгорел на пляже</label>
+          </div>
 
-          <input id="chuck-norris" type="checkbox" name="chuck-norris">
-          <label for="chuck-norris">Видел Чака Норриса</label>
+          <div class="travel-achievements__block  travel-achievements__block--width2">
+            <input id="chuck-norris" type="checkbox" name="chuck-norris">
+            <label for="chuck-norris"><svg class="travel-achievements__yes"><use xlink:href="#icon-yes"></svg>Видел Чака Норриса</label>
+            <input id="buy-souvenirs" type="checkbox" name="buy-souvenirs">
+            <label for="buy-souvenirs"><svg class="travel-achievements__yes"><use xlink:href="#icon-yes"></svg>Накупил сувениров</label>
+          </div>
 
-          <input id="buy-souvenirs" type="checkbox" name="buy-souvenirs">
-          <label for="buy-souvenirs">Накупил сувениров</label>
+          <div class="travel-achievements__block">
+            <input id="hold-tower" type="checkbox" name="hold-tower" checked>
+            <label for="hold-tower"><svg class="travel-achievements__yes"><use xlink:href="#icon-yes"></svg>Удержал башню</label>
 
-          <input id="hold-tower" type="checkbox" name="hold-tower" checked>
-          <label for="hold-tower">Удержал башню</label>
-
-          <input id="destroy-hotel" type="checkbox" name="destroy-hotel">
-          <label for="destroy-hotel">Разгромил отель</label>
+            <input id="destroy-hotel" type="checkbox" name="destroy-hotel">
+            <label for="destroy-hotel"><svg class="travel-achievements__yes"><use xlink:href="#icon-yes"></svg>Разгромил отель</label>
+          </div>
         </fieldset>
       </div>
     </div>
@@ -172,41 +226,50 @@
           <legend class="fieldset__legend">Ваши фотографии из поездки *</legend>
           <div class="download-photos__title">Ваши фотографии из поездки *</div>
 
-          <input type="file" name="your-photos" multiple value="Загрузить фото">
+          <input type="file" class="inputfile" name="file" id="file" multiple value="Загрузить фото">
+          <label for="file">Загрузить фото</label>
 
           <div class="download-photos__wrapper-photos">
 
             <div class="download-photos__small-photo">
-              <img src="img/small-photo.jpg" width="67" height="68">
+              <img src="img/small-photo-mob.jpg" width="68" height="68">
               <div class="download-photos__photo-name">IMG-1.JPG</div>
+              <span class="download-photos__delete"><svg class="download-photos__icon-delete"><use xlink:href="#icon-no"></use></svg></span>
             </div>
             <div class="download-photos__small-photo">
-              <img src="img/small-photo.jpg" width="67" height="68">
+              <img src="img/small-photo-mob.jpg" width="68" height="68">
               <div class="download-photos__photo-name">IMG-2.JPG</div>
+              <span class="download-photos__delete"><svg class="download-photos__icon-delete"><use xlink:href="#icon-no"></use></svg></span>
             </div>
             <div class="download-photos__small-photo">
-              <img src="img/small-photo.jpg" width="67" height="68">
+              <img src="img/small-photo-mob.jpg" width="68" height="68">
               <div class="download-photos__photo-name">IMG-3.JPG</div>
+              <span class="download-photos__delete"><svg class="download-photos__icon-delete"><use xlink:href="#icon-no"></use></svg></span>
             </div>
             <div class="download-photos__small-photo">
-              <img src="img/small-photo.jpg" width="67" height="68">
+              <img src="img/small-photo-mob.jpg" width="68" height="68">
               <div class="download-photos__photo-name">IMG-4.JPG</div>
+              <span class="download-photos__delete"><svg class="download-photos__icon-delete"><use xlink:href="#icon-no"></use></svg></span>
             </div>
             <div class="download-photos__small-photo">
-              <img src="img/small-photo.jpg" width="67" height="68">
+              <img src="img/small-photo-mob.jpg" width="68" height="68">
               <div class="download-photos__photo-name">IMG-5.JPG</div>
+              <span class="download-photos__delete"><svg class="download-photos__icon-delete"><use xlink:href="#icon-no"></use></svg></span>
             </div>
             <div class="download-photos__small-photo">
-              <img src="img/small-photo.jpg" width="67" height="68">
+              <img src="img/small-photo-mob.jpg" width="68" height="68">
               <div class="download-photos__photo-name">IMG-6.JPG</div>
+              <span class="download-photos__delete"><svg class="download-photos__icon-delete"><use xlink:href="#icon-no"></use></svg></span>
             </div>
             <div class="download-photos__small-photo">
-              <img src="img/small-photo.jpg" width="67" height="68">
+              <img src="img/small-photo-mob.jpg" width="68" height="68">
               <div class="download-photos__photo-name">IMG-7.JPG</div>
+              <span class="download-photos__delete"><svg class="download-photos__icon-delete"><use xlink:href="#icon-no"></use></svg></span>
             </div>
             <div class="download-photos__small-photo">
-              <img src="img/small-photo.jpg" width="67" height="68">
+              <img src="img/small-photo-mob.jpg" width="68" height="68">
               <div class="download-photos__photo-name">IMG-8.JPG</div>
+              <span class="download-photos__delete"><svg class="download-photos__icon-delete"><use xlink:href="#icon-no"></use></svg></span>
             </div>
 
           </div>
@@ -217,7 +280,7 @@
     <div class="form-btn  form-btn--bg">
       <div class="container">
         <button type="submit" name="main-button">Отправить форму</button>
-        <p class="form-btn__text-under"><span>*</span> — обязательные поля</p>
+        <p class="form-btn__text-under"><span class="red-star">*</span> — обязательные <span class="form-btn__extra-text">для заполнения</span> поля</p>
       </div>
     </div>
   </form>
@@ -225,15 +288,17 @@
 
 <footer class="main-footer">
   <div class="container">
-    <div class="logo-var2">
-      <a href="#"><img src="img/logo-var2.png" width="145" height="40" alt="Logo"></a>
-    </div>
+    <a class="logo-pink" href="#"></a>
     <div class="social">
-      <a class="social__btn  social__btn--twitter" href="#"></a>
-      <a class="social__btn  social__btn--facebook" href="#"></a>
-      <a class="social__btn  social__btn--youtube" href="#"></a>
+      <a class="social__btn" href="#"><svg class="social__btn-img  social__btn-img--twitter"><use xlink:href="#icon-twitter"></use></svg></a>
+      <a class="social__btn" href="#"><svg class="social__btn-img  social__btn-img--facebook"><use xlink:href="#icon-facebook"></use></svg></a>
+      <a class="social__btn" href="#"><svg class="social__btn-img  social__btn-img--youtube"><use xlink:href="#icon-youtube"></use></svg></a>
     </div>
-    <div class="developed-by">Разработано</div>
+    <div class="developed-by">Разработано
+      <svg class="developed-by__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.943 34.09">
+        <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036v10.02L13.472,31.85L1.925,24.979V15.127z"/>
+      </svg>
+    </div>
   </div>
 </footer>
 
