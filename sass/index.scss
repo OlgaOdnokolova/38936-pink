@@ -3,17 +3,25 @@
 .index-main .intro::after {
   content: " ";
   position: absolute;
-  bottom: 300px;
+  bottom: 270px;
   width: 259px;
   height: 287px;
   background-image: url(../img/iphone-hand-mobile.png);
+  background-size: 258px auto;
+  background-repeat: no-repeat;
+}
+
+@media (min-resolution: 1.5dppx) {
+  .index-main .intro::after {
+    background-image: url(../img/iphone-hand-mobile@2x.png);
+  }
 }
 
 .download-app {
   position: relative;
   z-index: 20;
-  margin-top: 320px;
-  padding: 30px 20px 35px 20px;
+  margin-top: 310px;
+  padding: 30px 0 30px 0;
   font-weight: 300;
   text-align: center;
   color: $promo-text-color;
@@ -22,8 +30,7 @@
   }
   &__btn{
     display: block;
-    //padding: 15px 37px;
-    padding: 15px 11.5%;
+    padding: 12px 11.5%;
     margin-bottom: 30px;
     text-decoration: none;
     font-size: $font-size18;
@@ -67,15 +74,16 @@
 }
 
 .promo-questions{
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   padding-top: 45px;
   text-align: center;
   font-size: $font-size24;
+  line-height: 26px;
   &--bg{
     background-color: $first-bg;
   }
   &__text{
-    margin-bottom: 45px;
+    margin-bottom: 35px;
     font-weight: 300;
   }
 }
@@ -83,7 +91,7 @@
 .app-description {
   position: relative;
   padding-top: 50px;
-  padding-bottom: 300px;
+  padding-bottom: 287px;
   &--bg {
     background-color: $second-bg;
   }
@@ -102,21 +110,26 @@
     position: absolute;
     width: 158px;
     height: 278px;
-    background-image: url(../img/screen-mobile-3.png);
     bottom: 0;
     left: 50%;
     margin-left: -79px;
+    background-image: url(../img/screen-mobile-3.png);
+    background-size: 158px auto;
   }
 }
 
+//@media (min-resolution: 1.5dppx) {
+//  .app-description::after {
+//    background: url(../img/iphone-screen-mobile-2@2x.png), url(../img/iphone-case-mobile@2x.png);
+//  }
+//}
+
 
 .description-item{
-  margin-bottom: 40px;
-  //margin-bottom: 14.29%;
+  margin-bottom: 31px;
   text-align: center;
   &__title{
-    margin-bottom: 20px;
-    //margin-bottom: 7.14%;
+    margin-bottom: 12px;
     font-size: $font-size18;
     font-weight: 600;
   }
@@ -132,8 +145,8 @@
 
 .comments-slider {
   position: relative;
-  padding-top: 45px;
-  padding-bottom: 115px;
+  padding-top: 42px;
+  padding-bottom: 120px;
   &--bg{
     background-color: $first-bg;
   }
@@ -158,7 +171,7 @@
       height: 6px;
       margin: 0 8px;
       background-color: #bec2c7;
-      border: 2px solid #ffffff;
+      border: 3px solid #ffffff;
       border-radius: 50%;
       cursor: pointer;
     }
@@ -176,7 +189,7 @@
     }
   }
   &__slide-title{
-    margin-bottom: 16px;
+    margin-bottom: 13px;
     font-size: $font-size18;
     line-height: $line-height30;
     font-weight: 600;
@@ -200,8 +213,8 @@
 
 .packages-slider{
   position: relative;
-  padding-top: 65px;
-  padding-bottom: 100px;
+  padding-top: 58px;
+  padding-bottom: 97px;
   &::before {
     content: " ";
     display: table;
@@ -251,7 +264,6 @@
     ul {
       position: relative;
       float: left;
-      //width: 276px;
       width: 28.75%;
       overflow: hidden;
       border-right: $form-grey-border;
@@ -274,6 +286,7 @@
       font-size: $font-size-base;
       color: #ffffff;
       text-align: center;
+      text-transform: uppercase;
       background-color: #d22856;
       transform: rotate(-42deg);
       transform-origin: 50% 50%;
@@ -281,8 +294,7 @@
     }
     ul li{
       position: relative;
-      padding: 22px 50px 22px 22px;
-      //padding: 7.97% 18.1% 7.97% 7.97%;
+      padding: 15px 50px 15px 22px;
       font-size: $font-size-base;
       line-height: $line-height30;
       text-transform: uppercase;
@@ -291,8 +303,7 @@
     }
     ul li:first-child{
       text-align: center;
-      padding: 22px 0;
-      //padding: 7.97% 0;
+      padding: 18px 0;
       font-size: $font-size18;
       font-weight: 600;
       line-height: $line-height30;
@@ -307,8 +318,8 @@
   }
   &__icon {
     position: absolute;
-    right: 25px;
-    bottom: 25px;
+    right: 16px;
+    bottom: 18px;
   }
   &__icon--yes {
     width: 29px;
@@ -352,7 +363,7 @@
 
 .contacts {
   position: relative;
-  padding: 40px 0;
+  padding: 46px 0 1px 0;
   text-align: center;
   &::after {
     content: " ";
@@ -361,7 +372,7 @@
     width: 100%;
     height: 60px;
     left: 0;
-    bottom: -14%;
+    bottom: -60px;
     z-index: 200;
     background-repeat: no-repeat;
   }
@@ -371,6 +382,7 @@
     font-weight: 300;
   }
   &__title{
+    margin-bottom: 3px;
     font-size: $font-size18;
     font-weight: 600;
   }
@@ -395,276 +407,382 @@
 }
 
 
-@media (min-width: 700px) {
+@media (min-width: 660px) {
 
+.index-main .intro::after {
+  bottom: 0;
+  right: 20px;
+  width: 660px;
+  height: 545px;
+  background-image: url(../img/iphone-hand-tablet@1x.png);
+  background-size: 700px auto;
+}
+
+@media (min-resolution: 1.5dppx) {
   .index-main .intro::after {
-    bottom: 0;
-    right: 0;
-    width: 700px;
-    height: 545px;
-    background-image: url(../img/iphone-hand-tablet@1x.png);
+    background-image: url(../img/iphone-hand-tablet@2x.png);
   }
+}
 
-  .intro {
-    background-image: url(../img/background-tablet@1x.jpg);
-    background-position: top;
-    &__slogan--index {
-      width: 31.03%;
-      margin-top: 100px;
-      margin-left: 9%;
-      margin-bottom: 37px;
-      font-size: 40px;
-      line-height: initial;
-    }
-  }
-
-  .download-app {
-    width: 43%;
-    margin-top: 0;
-    padding-left: 5.7%;
-    padding-bottom: 100px;
-    &--bg {
-      background-color: transparent;
-    }
-  }
-
-  .promo-questions {
-    padding-bottom: 105px;
+.intro {
+  &__slogan--index {
+    width: 31.03%;
+    margin-top: 117px;
+    margin-left: 9%;
+    margin-bottom: 32px;
     font-size: 40px;
-    &__text {
-      margin-bottom: 26px;
-    }
-    &__text:last-child {
-      width: 54.84%;
-      margin: 0 auto;
-      line-height: 40px;
-    }
+    line-height: 48px;
   }
+}
 
-  .app-description {
-    padding-top: 25px;
-    padding-bottom: 0.1%;
-    &::before {
-      top: -6.5625%;
-      height: 77px;
-    }
-    &::after {
-      margin-left: 0;
-      bottom: 0;
-      left: 40px;
-      width: 268px;
-      height: 481px;
-      background-image: url(../img/iphone-screen-tablet-3@1x.png);
-    }
-    &--bg {
-      background-image: none;
-    }
+.download-app {
+  margin-top: 0;
+  padding-bottom: 85px;
+  padding-top: 0;
+  .container {
+    width: 45%;
+    margin: 0 0;
   }
-
-  .description-item {
-    position: relative;
-    width: 51.61%;
-    margin-bottom: 36px;
-    padding-left: 48.387%;
-    text-align: left;
-    z-index: 100;
-    &__title {
-      margin-bottom: 10px;
-    }
+  &--bg {
+    background-color: transparent;
   }
+  &__btn {
+    margin-bottom: 46px;
+  }
+  &__platform--first {
+    margin-left: 25px;
+  }
+  &__text {
+    margin-top: 22px;
+    font-size: $font-size18;
+  }
+}
 
-  .app-effect {
+.promo-questions {
+  padding-top: 60px;
+  padding-bottom: 112px;
+  font-size: 40px;
+  &__text {
+    margin-bottom: 16px;
+  }
+  &__text:last-child {
+    width: 54.84%;
+    margin: 0 auto;
+    line-height: 42px;
+  }
+}
+
+.app-description {
+  padding-top: 16px;
+  padding-bottom: 1.1%;
+  &::before {
+    top: -6.5625%;
+    height: 77px;
+  }
+  &::after {
+    margin-left: 0;
+    bottom: 0;
+    left: 20px;
+    width: 268px;
+    height: 481px;
+    background-image: url(../img/iphone-screen-tablet-3@1x.png);
+    background-repeat: no-repeat;
+    background-size: 268px auto;
+  }
+  &--bg {
+    background-image: none;
+  }
+}
+
+@media (min-resolution: 1.5dppx) {
+  .app-description::after {
+    background-image: url(../img/iphone-screen-tablet-3@2x.png);
+  }
+}
+
+.description-item {
+  position: relative;
+  width: 51.61%;
+  margin-bottom: 36px;
+  padding-left: 50%;
+  text-align: left;
+  z-index: 100;
+  &__title {
+    margin-bottom: 11px;
+  }
+}
+
+.app-effect {
+  display: block;
+  margin-bottom: 74px;
+  &::after {
+    @include clearfix;
+  }
+  &__title {
+    padding-left: 310px;
+    padding-right: 50px;
+    padding-top: 41px;
+    margin-bottom: 8px;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 600;
+  }
+  &__text {
+    padding-left: 310px;
+    padding-right: 12px;
+    margin-bottom: 10px;
+  }
+  &__link {
+    color: $text-color-red;
+    text-decoration: underline;
+  }
+}
+
+.watch {
+  float: left;
+  width: 261px;
+  height: 302px;
+  margin-right: 8%;
+}
+
+.comments-slider {
+  padding-top: 56px;
+  padding-bottom: 120px;
+  &__slide-title--desc {
     display: block;
-    margin-bottom: 72px;
-    &::after {
-      @include clearfix;
-    }
-    &__title {
-      padding-top: 41px;
-      margin-bottom: 16px;
-      font-size: 30px;
-      line-height: 36px;
-      font-weight: 600;
-    }
-    &__text {
-      margin-bottom: 4px;
-    }
-    &__link {
-      color: $text-color-red;
-      text-decoration: underline;
-    }
   }
-
-  //картинка часов
-  .watch {
-    float: left;
-    width: 298.001px;
-    height: 345.097px;
-    margin-right: 6.129%;
+  &__slide-title--mob {
+    display: none;
   }
-
-  .comments-slider {
-    padding-top: 56px;
-    padding-bottom: 120px;
-    &__slide-title--desc {
-      display: block;
-    }
-    &__slide-title--mob {
-      display: none;
-    }
-    &__slide-title {
-      margin-bottom: 0;
-    }
-    &__slide-title div{
-      font-size: $font-size-base;
-      font-weight: 400;
-    }
-    &__slide-text {
-      margin-bottom: 35px;
-      font-size: $font-size18;
-    }
+  &__slide-title {
+    margin-bottom: 0;
   }
+  &__slide-title div{
+    font-size: $font-size-base;
+    font-weight: 400;
+  }
+  &__slide-text {
+    margin-bottom: 35px;
+    font-size: $font-size18;
+  }
+  &__controls label {
+    margin: 0 4px;
+  }
+}
 
-  .packages-slider {
-    padding: 37px 0 68px 0;
-    &::before {
-      height: 77px;
-      top: -7.5625%;
-      left: 0;
+.packages-slider {
+  padding: 37px 0 68px 0;
+  &::before {
+    height: 77px;
+    top: -8.5%;
+    left: 0;
+  }
+  &__inner {
+    width: 97%;
+    padding: 0 3%;
+    margin: 0 auto;
+  }
+  &__text {
+    display: none;
+  }
+  &__controls {
+    display: none;
+  }
+  &__slides::after {
+    @include clearfix;
+  }
+  &__slides {
+    width: 100%;
+    ul {
+      width: 24%;
     }
-    &__inner {
-      width: 88.57%;
-      padding: 0 5.7%;
-      margin: 0 auto;
-    }
-    &__text {
-      display: none;
-    }
-    &__controls {
-      display: none;
-    }
-    &__slides::after {
-      @include clearfix;
-    }
-    &__slides {
+    ul li {
       width: 100%;
-      ul {
-        width: 24%;
-      }
-      ul li {
-        width: 100%;
-        padding: 0;
-        height: 45px;
-        line-height: 45px;
-        font-size: $font-size-base;
-        text-transform: none;
-      }
-      ul li::after {
-        left: 50%;
-        bottom: 5px;
-        margin-left: -15px;
-      }
-      ul:first-of-type li::after {
-        display: none;
-      }
-      ul:first-of-type {
-        display: block;
-        border-right: none;
-        li:first-child {
-          background-color: $second-bg;
-          border-left: none;
-          border-bottom: 2px solid #e5e5e5;
-        }
-        li {
-          width: 90%;
-          padding-left: 15px;
-          border-left: 2px solid #e5e5e5;
-        }
-      }
-      ul li:first-child {
-        width: 100%;
-        padding-top: 15px;
-        padding-bottom: 25px;
-        font-size: 16px;
-        border-bottom: 2px solid $text-color-base;
-      }
-      ul:nth-child(2)::before {
-        display: none;
-      }
-      ul:nth-child(3)::before {
-        content: "Хит";
-        display: table;
-        position: absolute;
-        top: 8px;
-        left: -24px;
-        width: 100px;
-        height: 20px;
-        font-size: $font-size-base;
-        color: #ffffff;
-        text-align: center;
-        background-color: #d22856;
-        transform: rotate(-42deg);
-        transform-origin: 50% 50%;
-        z-index: 50;
-      }
+      padding: 0;
+      height: 45px;
+      line-height: 45px;
+      font-size: $font-size-base;
+      text-transform: none;
     }
-    ul li &__price {
+    ul li::after {
+      left: 50%;
+      bottom: 5px;
+      margin-left: -15px;
+    }
+    ul:first-of-type li::after {
+      display: none;
+    }
+    ul:first-of-type {
       display: block;
-      font-size: $font-size18;
+      border-right: none;
+      li:first-child {
+        background-color: $second-bg;
+        border-left: none;
+        border-bottom: 2px solid #e5e5e5;
+      }
+      li {
+        width: 90%;
+        padding-left: 15px;
+        border-left: 2px solid #e5e5e5;
+      }
     }
-    &__icon {
-      right: 50%;
-      margin-right: -15px;
-      bottom: 12px;
+    ul li:first-child {
+      width: 100%;
+      padding-top: 12px;
+      padding-bottom: 20px;
+      font-size: 16px;
+      border-bottom: 2px solid $text-color-base;
     }
-    &__icon--yes {
-      width: 29px;
-      height: 24px;
-      fill: #42c849;
+    ul:nth-child(2)::before {
+      display: none;
     }
-    &__icon--no {
-      width: 27px;
-      height: 27px;
-      fill: #f25b26;
-    }
-  }
-
-  #btn-2:checked~ .packages-slider__inner .packages-slider__slides {
-    //transform: translate(-260px);
-    transform: translate(0);
-  }
-
-  .contacts {
-    .container {
+    ul:nth-child(3)::before {
+      content: "Хит";
+      display: table;
+      position: absolute;
+      top: 4px;
+      left: -33px;
+      width: 100px;
+      height: 20px;
+      font-size: $font-size-base;
+      color: #ffffff;
       text-align: center;
-    }
-    &__inner {
-      display: inline-block;
-    }
-    &__inner:last-of-type {
-      display: block;
-    }
-    &__inner:first-of-type {
-      margin-right: 10%;
-    }
-    &::after {
-      height: 65px;
-      bottom: -20%;
+      background-color: #d22856;
+      transform: rotate(-42deg);
+      transform-origin: 50% 50%;
+      z-index: 50;
     }
   }
-
-  .map {
-    height: 36.91vh;
-    background-image: url("../img/map-tablet.jpg");
+  ul li &__price {
+    display: block;
+    font-size: $font-size18;
   }
+  &__icon {
+    right: 50%;
+    margin-right: -15px;
+    bottom: 12px;
+  }
+  &__icon--yes {
+    width: 29px;
+    height: 24px;
+    fill: #42c849;
+  }
+  &__icon--no {
+    width: 27px;
+    height: 27px;
+    fill: #f25b26;
+  }
+}
 
+#btn-2:checked~ .packages-slider__inner .packages-slider__slides {
+//transform: translate(-260px);
+  transform: translate(0);
+}
+
+.contacts {
+  padding-top: 46px;
+  .container {
+    text-align: center;
+  }
+  &__promo {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 43px;
+  }
+  &__inner {
+    display: inline-block;
+  }
+  &__inner:last-of-type {
+    display: block;
+    width: 33%;
+    padding-top: 22px;
+    margin: 0 auto;
+  }
+  &__inner:first-of-type {
+    margin-right: 18%;
+  }
+  &__title {
+    margin-bottom: 7px;
+  }
+  &::after {
+    height: 65px;
+    bottom: -15%;
+  }
+}
+
+.map {
+  height: 63.91vh;
+  background-image: url("../img/map-tablet.jpg");
+}
 
 }
 
 @media (min-width: 960px) {
 
+  .index-main .intro::after {
+    bottom: 0;
+    right: 203px;
+    width: 900px;
+    height: 645px;
+    background-image: url(../img/iphone-hand-desktop@1x.png);
+    background-size: 1050px auto;
+  }
 
+  @media (min-resolution: 1.5dppx) {
+    .index-main .intro::after {
+      background-image: url(../img/iphone-hand-desktop@2x.png);
+    }
+  }
 
+  .intro {
+    &__slogan--index {
+      margin-left: 0;
+      margin-bottom: 60px;
+      font-size: 50px;
+      line-height: 54px;
+      margin-top: 140px;
+    }
+  }
+
+  .download-app {
+    width: auto;
+    text-align: left;
+    .container {
+      width: 97.9%;
+      padding: 0 1%;
+      margin: 0 auto;
+    }
+   &__btn {
+     width: 236px;
+     margin-bottom: 63px;
+     padding: 15px 28px;
+     text-align: center;
+   }
+    &__text {
+      margin-top: 40px;
+      width: 300px;
+      font-size: 18px;
+      text-align: center;
+    }
+    &__platform {
+      margin-right: 33px;
+    }
+    &__platform--first {
+      margin-left: 45px;
+    }
+  }
+
+  .promo-questions {
+    font-size: 50px;
+    padding-top: 68px;
+    line-height: 55px;
+    &__text {
+      margin-bottom: 7px;
+    }
+    &__text:last-child {
+      line-height: 56px;
+    }
+  }
 
 
 }

@@ -110,10 +110,10 @@
     @include form-block-title;
     margin-bottom: 20px;
   }
-  input[type="text"] {
+  .days-number {
     display: inline-block;
     vertical-align: top;
-    padding: 17.5px 0;
+    padding: 17px 0;
     //width: 156px;
     width: 55.7%;
     text-align: center;
@@ -168,7 +168,7 @@
   &--bg {
     background-color: $second-bg;
   }
-  input[type="number"] {
+  .people-number {
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -222,7 +222,7 @@
     color: $text-color-red;
     text-transform: uppercase;
   }
-  label:first-of-type::before {
+  label::before {
     content: "№";
     position: absolute;
     left: 25px;
@@ -241,9 +241,14 @@
     border: $form-grey-border;
     background-color: $first-bg;
   }
-  input:last-of-type {
-    //margin-left: 60px;
-    margin-left: 21.4%;
+  &__block--second {
+    input {
+      //margin-left: 60px;
+      margin-left: 21.4%;
+    }
+    label::before {
+      display: none;
+    }
   }
   &__number {
     display: inline-block;
@@ -421,12 +426,12 @@ input[name="delete"] {
 }
 
 
-@media (min-width: 700px) {
+@media (min-width: 660px) {
 
   .personal-data {
     padding-top: 94px;
     &__text {
-      width: 80.5%;
+      width: 80.6%;
       margin: 0 auto;
       margin-bottom: 36px;
       font-size: $font-size18;
@@ -439,7 +444,7 @@ input[name="delete"] {
   .fieldset {
     border: $form-grey-border;
     border-radius: 3px;
-    padding-left: 9.5%;
+    padding-left: 9.6%;
     &--pt42 {
       padding-top: 22px;
     }
@@ -483,8 +488,8 @@ input[name="delete"] {
 
   .fellow-travelers {
     &::before {
-      width: 71%;
-      margin-left: -35.5%;
+      width: 75%;
+      margin-left: -37.5%;
     }
 
     &--bg {
@@ -541,9 +546,9 @@ input[name="delete"] {
 
   .download-photos {
     &::before {
-      width: 71%;
-      margin-left: -35.5%;
-      top: 210px;
+      width: 75%;
+      margin-left: -37.5%;
+      top: 185px;
     }
     &__title {
       display: none;
@@ -583,6 +588,7 @@ input[name="delete"] {
   }
 
   .form-btn {
+    padding-bottom: 0;
     .container::after {
       @include clearfix;
     }
@@ -657,8 +663,8 @@ input[name="delete"] {
       padding-bottom: 30px;
     }
     &::before {
-      width: 85.4%;
-      margin-left: -42.7%;
+      width: 820px;
+      margin-left: -410px;
     }
     &__number {
       width: 34%;
@@ -732,14 +738,15 @@ input[name="delete"] {
 
   .download-photos {
     &::before {
-      width: 85.4%;
-      margin-left: -42.7%;
+      width: 820px;
+      margin-left: -410px;
     }
     .inputfile + label {
       width: 100%;
       top: 180px;
       color: #ffffff;
       background-color: $text-color-red;
+      border: none;
     }
     &__small-photo {
       margin-right: 57px;
