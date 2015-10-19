@@ -22,8 +22,7 @@ a:hover {
 }
 
 .container {
-  //width: 280px;
-  max-width: 960px;
+  max-width: 940px;
   width: 87.5%;
   padding: 0;
   margin: 0 auto;
@@ -44,7 +43,7 @@ p {
 }
 
 .logo {
-  display: block;
+  display: inline-block;
   width: 74px;
   height: 23px;
 }
@@ -52,6 +51,12 @@ p {
 .logo-header-svg {
   width: 74px;
   height: 23px;
+  &:active {
+    .logo-text path, .logo-pink-star, .logo-glasses path, .logo-dark-star {
+      fill: #fff;
+      opacity: .3;
+    }
+  }
   .logo-pink-star, .logo-glasses, .logo-dark-star {
     display: none;
   }
@@ -65,29 +70,34 @@ p {
 
 .nav-btn, .nav-close {
   display: inline-block;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  z-index: 4;
-  width: 50px;
-  height: 25px;
   text-indent: 3000px;
 }
 
-//иконка меню в svg
-.main-menu {
-  display: inline-block;
+.main-menu-svg {
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  z-index: 4;
   width: 50px;
-  height: 25px;
+  height: 24px;
+  path {
+    fill: #fff;
+  }
 }
 
-.nav-close {
+.nav-close-svg {
+  position: absolute;
+  top: 20px;
+  left: 278px;
+  width: 22px;
+  height: 23px;
   display: none;
   z-index: 3;
+  fill: #fff;
 }
 
-.main-nav:target + .nav-close {
-  display: block;
+.main-nav:target + .nav-close .nav-close-svg {
+  display: inline-block;
   z-index: 5;
 }
 
@@ -95,8 +105,8 @@ p {
   position: absolute;
   display: block;
   width: 100%;
-  height: 0px;
-  padding-top: 0px;
+  height: 0;
+  padding-top: 0;
   opacity: 0;
   transition: none;
 }
@@ -115,19 +125,20 @@ p {
 
 .main-nav:target {
   position: absolute;
-  top: 62px;
+  //top: 62px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   opacity: 1;
-  z-index: 2;
+  z-index: 5;
 }
 .main-nav:target ul {
   display: block;
 }
 .main-nav:target .main-nav__element {
-    display: block;
-  }
+  display: block;
+}
 .main-nav:target .main-nav__element a {
   display: block;
   height: 100%;
@@ -145,8 +156,10 @@ p {
   border-top: 1px solid #485460;
 }
 
-.main-nav:target + .main-header {
-  background-color: #283645;
+.main-nav:target .main-nav__element:first-child a {
+  display: inline-block;
+  text-align: left;
+  padding-left: 20px;
 }
 
 .intro {
@@ -164,7 +177,8 @@ p {
     text-align: center;
   }
   &__slogan--inner {
-    padding-bottom: 57px;
+    padding-top: 10px;
+    padding-bottom: 52px;
   }
 }
 
@@ -195,14 +209,22 @@ p {
 .logo-footer-svg {
   width: 142px;
   height: 40px;
-  .logo-pink-star {
-    display: none;
-  }
   .logo-dark-star {
-    fill: #D22856;
+    fill: $text-color-red;
   }
   .logo-text path {
     fill: #000;
+  }
+  &:active {
+    .logo-text path {
+      fill: #000;
+    }
+    .logo-text path, .logo-pink-star, .logo-glasses path, ,logo-dark-star {
+    opacity: .3;
+    }
+  }
+  .logo-pink-star {
+    display: none;
   }
 }
 
@@ -239,6 +261,12 @@ p {
     width: 15px;
     height: 15px;
   }
+  &__btn:active {
+    border: 3px solid #e5e5e5;
+    .social__btn-img {
+      opacity: .3;
+    }
+  }
 }
 
 .developed-by {
@@ -252,6 +280,12 @@ p {
     width: 27px;
     height: 34px;
     fill: #d22856;
+    cursor: pointer;
+  }
+  &__logo:active {
+    path {
+      opacity: .3;
+    }
   }
 }
 
@@ -291,8 +325,19 @@ p {
     }
   }
 
-  .main-nav:target {
-    top: 100px;
+  .main-menu-svg {
+    top: 45px;
+    left: 590px;
+  }
+
+  .nav-close-svg {
+    top: 45px;
+    left: 618px;
+  }
+
+  .main-nav:target .main-nav__element:first-child a {
+    padding-top: 26px;
+    padding-bottom: 43px;
   }
 
   .intro {
@@ -313,7 +358,8 @@ p {
   }
 
   .intro__slogan--inner {
-    padding-bottom: 85px;
+    padding-top: 0;
+    padding-bottom: 65px;
     width: 80.6%;
     margin: 0 auto;
     font-size: 50px;
@@ -324,7 +370,7 @@ p {
     .container::after {
       @include clearfix;
     }
-    padding-top: 36px;
+    padding-top: 100px;
     padding-bottom: 35px;
   }
 
@@ -339,10 +385,6 @@ p {
 
   .main-footer--index {
     display: block;
-  }
-
-  .main-footer {
-    padding-top: 33px;
   }
 
   .social {
@@ -396,6 +438,17 @@ p {
     .logo-dark-star {
       fill: #D22856;
     }
+    &:hover {
+      .logo-text path, .logo-pink-star, .logo-glasses path, .logo-dark-star {
+        fill: $text-color-red;
+      }
+    }
+    &:active {
+      .logo-text path, .logo-pink-star, .logo-glasses path, .logo-dark-star {
+        fill: #fff;
+        opacity: .3;
+      }
+    }
   }
 
   .nav-btn, .nav-close {
@@ -414,6 +467,9 @@ p {
       display: inline-block;
       vertical-align: top;
     }
+    &__element:first-child {
+      display: none;
+    }
     ul {
       display: block;
       margin: 0
@@ -428,8 +484,15 @@ p {
       color: #fff;
       text-decoration: none;
     }
-    &__element a:last-child {
-      padding-right: 20px;
+    &__element:last-child a {
+      padding-right: 0;
+    }
+    &__element:hover  a{
+      text-decoration: underline;
+    }
+    &__element:active a {
+      text-decoration: none;
+      opacity: .3;
     }
   }
 
@@ -438,6 +501,9 @@ p {
     background-image: url(../img/background-fullsize.jpg);
     background-position: top;
     background-size: cover;
+    &__slogan--inner {
+      padding-bottom: 58px;
+    }
   }
 
   .logo-footer-svg {
@@ -447,12 +513,34 @@ p {
     .logo-dark-star {
       fill: #283645;
     }
+    &:hover {
+      .logo-text path {
+        fill: $text-color-red;
+      }
+    }
+  }
+
+  .main-footer {
+    margin: 70px 0;
+    padding: 0;
+  }
+
+  .social {
+    &__btn:hover {
+      border: 3px solid #2e3b4a;
+    }
   }
 
   .developed-by {
     width: 20%;
     padding-right: 42px;
     text-align: right;
+    font-size: $font-size18;
+    &__logo:hover {
+      path {
+        fill: $text-color-base;
+      }
+    }
   }
 
 

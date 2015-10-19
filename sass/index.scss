@@ -40,6 +40,13 @@
     color: #ffffff;
     cursor: pointer;
   }
+  &__btn:hover {
+    background-color: #fff;
+    color: $text-color-red;
+  }
+  &__btn:active {
+    opacity: .3;
+  }
   &__platform {
     position: relative;
     display: inline-block;
@@ -57,7 +64,6 @@
   }
 }
 
-//иконки apple, android, microsoft
 .apple-logo {
   width: 46.21px;
   height: 56.753px;
@@ -113,16 +119,16 @@
     bottom: 0;
     left: 50%;
     margin-left: -79px;
-    background-image: url(../img/screen-mobile-3.png);
+    background-image: url(../img/my-screen-mobile@1x.png);
     background-size: 158px auto;
   }
 }
 
-//@media (min-resolution: 1.5dppx) {
-//  .app-description::after {
-//    background: url(../img/iphone-screen-mobile-2@2x.png), url(../img/iphone-case-mobile@2x.png);
-//  }
-//}
+@media (min-resolution: 1.5dppx) {
+  .app-description::after {
+    background-image: url(../img/my-screen-mobile@2x.png);
+  }
+}
 
 
 .description-item{
@@ -150,11 +156,11 @@
   &--bg{
     background-color: $first-bg;
   }
-  input[type="radio"]{
+  input[type="radio"] {
     position: absolute;
     opacity: 0;
   }
-  &__controls{
+  &__controls {
     content: " ";
     position: absolute;
     left: 50%;
@@ -164,16 +170,19 @@
     height: 15px;
     text-align: center;
     z-index: 100;
-    label{
+    label {
       display: inline-block;
       vertical-align: top;
       width: 6px;
       height: 6px;
       margin: 0 8px;
-      background-color: #bec2c7;
+      background-color: rgba(0, 0, 0, .3);
       border: 3px solid #ffffff;
       border-radius: 50%;
       cursor: pointer;
+    }
+    label:active {
+      background-color: rgba(0, 0, 0, .1);
     }
   }
   &__slide{
@@ -201,6 +210,9 @@
     font-size: $font-size-base;
     color: $text-color-base;
     line-height: $line-height30;
+  }
+  &__arrows {
+    display: none;
   }
 }
 
@@ -248,10 +260,13 @@
       width: 6px;
       height: 6px;
       margin: 0 8px;
-      background-color: #bec2c7;
+      background-color: rgba(0, 0, 0, .3);
       border: 3px solid #f2f2f2;
       border-radius: 50%;
       cursor: pointer;
+    }
+    label:active {
+      background-color: rgba(0, 0, 0, .1);
     }
   }
   &__inner {
@@ -397,6 +412,20 @@
   &--bg{
     background-color: $first-bg;
   }
+  &__inner--desc {
+    display: none;
+  }
+}
+
+a.contacts__contact:hover {
+  color: $text-color-base;
+  text-decoration: underline;
+}
+
+a.contacts__contact:active {
+  text-decoration: none;
+  color: $text-color-base;
+  opacity: .3;
 }
 
 .map {
@@ -514,7 +543,7 @@
 
 .app-effect {
   display: block;
-  margin-bottom: 74px;
+  padding-top: 57px;
   &::after {
     @include clearfix;
   }
@@ -536,6 +565,10 @@
     color: $text-color-red;
     text-decoration: underline;
   }
+  &__link:active {
+    text-decoration: none;
+    opacity: .3;
+  }
 }
 
 .watch {
@@ -546,7 +579,7 @@
 }
 
 .comments-slider {
-  padding-top: 56px;
+  padding-top: 80px;
   padding-bottom: 120px;
   &__slide-title--desc {
     display: block;
@@ -578,8 +611,9 @@
     left: 0;
   }
   &__inner {
-    width: 97%;
-    padding: 0 3%;
+    width: 91%;
+    padding: 0 4%;
+    padding-left: 5%;
     margin: 0 auto;
   }
   &__text {
@@ -692,7 +726,10 @@
   &__inner {
     display: inline-block;
   }
-  &__inner:last-of-type {
+  &__inner--desc {
+    display: none;
+  }
+  &__inner--mob {
     display: block;
     width: 33%;
     padding-top: 22px;
@@ -711,7 +748,7 @@
 }
 
 .map {
-  height: 63.91vh;
+  height: 378px;
   background-image: url("../img/map-tablet.jpg");
 }
 
@@ -752,12 +789,16 @@
       padding: 0 1%;
       margin: 0 auto;
     }
-   &__btn {
+    &__btn {
      width: 236px;
      margin-bottom: 63px;
      padding: 15px 28px;
      text-align: center;
-   }
+    }
+    &__btn:hover {
+      background-color: #fff;
+      color: $text-color-red;
+    }
     &__text {
       margin-top: 40px;
       width: 300px;
@@ -775,6 +816,7 @@
   .promo-questions {
     font-size: 50px;
     padding-top: 68px;
+    padding-bottom: 180px;
     line-height: 55px;
     &__text {
       margin-bottom: 7px;
@@ -783,6 +825,223 @@
       line-height: 56px;
     }
   }
+
+  .app-description {
+    padding-top: 256px;
+    padding-bottom: 0;
+    font-size: 0;
+    &::before {
+      top: -12%;
+      height: 150px;
+    }
+    &::after {
+      display: none;
+    }
+  }
+
+  .description-item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 0 2%;
+    width: 31.9%;
+    margin-right: 2%;
+    margin-bottom: 0;
+    text-align: center;
+    &:last-child {
+      margin-right: 0;
+    }
+    &__title {
+      margin-bottom: 23px;
+      font-size: 30px;
+      line-height: 30px;
+    }
+    &__text {
+      font-size: $font-size18;
+      line-height: $line-height30;
+    }
+    &::before {
+      content: " ";
+      position: absolute;
+      top: -357px;
+      left: 10px;
+      width: 292px;
+      height: 302px;
+      background-size: 292px auto;
+    }
+    &--first::before {
+      background-image: url(../img/iphone-screen-desktop-1@1x.png);
+    }
+    &--second::before {
+      background-image: url(../img/iphone-screen-desktop-2@1x.png);
+    }
+    &--third::before {
+      background-image: url(../img/iphone-screen-desktop-3@1x.png);
+    }
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    .description-item {
+      &--first::before {
+        background-image: url(../img/iphone-screen-desktop-1@2x.png);
+      }
+      &--second::before {
+        background-image: url(../img/iphone-screen-desktop-2@2x.png);
+      }
+      &--third::before {
+        background-image: url(../img/iphone-screen-desktop-3@2x.png);
+      }
+    }
+  }
+
+  .app-effect {
+    padding-top: 67px;
+    padding-bottom: 67px;
+    background-color: $second-bg;
+    &__title {
+      padding-top: 91px;
+      margin-bottom: 21px;
+    }
+    &__text {
+      margin-bottom: 31px;
+      font-size: $font-size18;
+      line-height: $line-height30;
+    }
+    &__link {
+      font-size: $font-size18;
+      line-height: $line-height30;
+    }
+  }
+
+  .watch {
+    margin-right: 7%;
+    width: 300px;
+    height: 346px;
+  }
+
+  .comments-slider {
+    position: relative;
+    padding-top: 183px;
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 70px;
+      left: 600px;
+      width: 77px;
+      height: 63px;
+      background-image: url(../img/quotes.svg);
+      opacity: .2;
+    }
+    &__slide {
+      width: 73.4%;
+      margin: 0 auto;
+    }
+    &__controls {
+      display: none;
+    }
+    &__slide-title {
+      font-size: 24px;
+      div {
+        font-size: $font-size18;
+      }
+    }
+    &__arrows {
+      display: block;
+      position: absolute;
+      width: 940px;
+    }
+    &__arrow {
+      position: absolute;
+      top: -160px;
+      width: 22px;
+      height: 42px;
+      opacity: .3;
+      cursor: pointer;
+    }
+    &__arrow--left {
+      left: 0;
+    }
+    &__arrow--right {
+      right: 0;
+    }
+    &__arrow:hover {
+      opacity: .6;
+    }
+    &__arrow:active {
+      opacity: .1;
+    }
+  }
+
+  .packages-slider {
+    padding-top: 74px;
+    padding-bottom: 96px;
+    &::before {
+      top: -12%;
+      height: 150px;
+    }
+    &__inner {
+      width: 940px;
+      padding: 0 1%;
+      margin: 0 auto;
+    }
+    &__slides ul {
+      box-sizing: border-box;
+      width: 25%;
+    }
+    &__slides ul:nth-child(3)::before {
+      top: 8px;
+      left: -24px;
+      height: 29px;
+    }
+    &__slides ul li {
+      padding-top: 15px;
+      padding-right: 5px;
+      padding-bottom: 0;
+      line-height: normal;
+      font-size: $font-size18;
+    }
+    &__slides ul li:first-child {
+      padding-top: 16px;
+      padding-bottom: 34px;
+    }
+  }
+
+  .contacts {
+    padding-top: 75px;
+    font-size: 0;
+    &__promo {
+      margin-bottom: 65px;
+      font-size: 50px;
+    }
+    &__inner {
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: top;
+      width: 26.5%;
+      margin-left: 7.5%;
+      text-align: center;
+    }
+    &__inner:first-of-type {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &__title {
+      margin-bottom: 26px;
+    }
+    &__inner--desc {
+      display: inline-block;
+    }
+    &__inner--mob {
+      display: none;
+    }
+  }
+
+  .map {
+    height: 526px;
+    background-image: url(../img/map-desc.jpg);
+  }
+
 
 
 }
