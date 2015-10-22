@@ -91,8 +91,8 @@
   }
 }
 
-.what-app input[type="radio"]+label .what-app__red-dot {display: none;}
-.what-app input[type="radio"]:checked+label .what-app__red-dot {display: block;}
+.what-app input[type="radio"] + label .what-app__red-dot {display: none;}
+.what-app input[type="radio"]:checked + label .what-app__red-dot {display: block;}
 
 
 .traveling-time {
@@ -400,7 +400,6 @@ input[name="delete"] {
   }
   &__wrapper-photos {
     font-size: 0;
-    margin-right: -38px;
   }
   &__small-photo {
     position: relative;
@@ -408,6 +407,9 @@ input[name="delete"] {
     vertical-align: top;
     margin-right: 38px;
     margin-bottom: 17px;
+  }
+  &__small-photo:nth-child(3n) {
+    margin-right: 0;
   }
   &__delete {
     display: block;
@@ -437,7 +439,6 @@ input[name="delete"] {
     }
   }
   &__photo-name {
-    margin-top: -8px;
     font-size: 12px;
     text-transform: uppercase;
   }
@@ -658,9 +659,6 @@ input[name="delete"] {
       margin-bottom: 109px;
       background-color: $first-bg;
     }
-    &__wrapper-photos {
-      margin-right: -70px;
-    }
     &__small-photo {
       width: 120px;
       margin-right: 70px;
@@ -672,7 +670,7 @@ input[name="delete"] {
       }
     }
     &__photo-name {
-      margin-top: 0;
+      margin-top: 14px;
       font-size: $font-size-base;
     }
     &__delete {
@@ -802,11 +800,11 @@ input[name="delete"] {
     &__add:active, &__remove:active {
       background-color: $text-color-base;
     }
-    &__remove:hover+.days-number {
-      border-left-color: $text-color-base;
+    &__remove:hover {
+      border-right: 2px solid $text-color-base;
     }
-    &__add:hover+.days-number {
-      border-right-color: $text-color-base;
+    &__add:hover {
+      border-left: 2px solid $text-color-base;
     }
   }
 
@@ -849,11 +847,11 @@ input[name="delete"] {
     &__add:active, &__remove:active {
       background-color: $text-color-base;
     }
-    &__remove:hover+.people-number {
-      border-left-color: $text-color-base;
+    &__remove:hover {
+      border-right: 2px solid $text-color-base;
     }
-    &__add:hover+.people-number {
-      border-right-color: $text-color-base;
+    &__add:hover {
+      border-left: 2px solid $text-color-base;
     }
   }
 
@@ -974,15 +972,21 @@ input[name="delete"] {
       border: none;
     }
     .inputfile:hover + label {
-      color: $text-color-base;
+      background-color: rgba(210, 40, 86, .7);
     }
     .inputfile:active + label {
       color: #fff;
       background-color: rgba(210, 40, 86, .3);
     }
     &__small-photo {
-      margin-right: 55px;
+      margin-right: 53px;
       margin-bottom: 22px;
+    }
+    &__small-photo:nth-child(3n) {
+      margin-right: 53px;
+    }
+    &__small-photo:nth-child(5n) {
+      margin-right: 0;
     }
     &__delete:hover {
       border-color: $text-color-base;

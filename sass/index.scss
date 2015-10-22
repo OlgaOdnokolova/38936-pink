@@ -103,7 +103,6 @@
   }
   &::before {
     content: " ";
-    display: table;
     position: absolute;
     top: -21px;
     width: 100%;
@@ -211,7 +210,7 @@
     color: $text-color-base;
     line-height: $line-height30;
   }
-  &__arrows {
+  &__arrow {
     display: none;
   }
 }
@@ -229,7 +228,6 @@
   padding-bottom: 97px;
   &::before {
     content: " ";
-    display: table;
     position: absolute;
     top: -21px;
     width: 100%;
@@ -380,17 +378,6 @@
   position: relative;
   padding: 46px 0 1px 0;
   text-align: center;
-  &::after {
-    content: " ";
-    position: absolute;
-    background-image: url(../img/triangle-white-footer.svg);
-    width: 100%;
-    height: 60px;
-    left: 0;
-    bottom: -60px;
-    z-index: 200;
-    background-repeat: no-repeat;
-  }
   &__promo{
     margin-bottom: 40px;
     font-size: $font-size24;
@@ -433,6 +420,11 @@ a.contacts__contact:active {
   height: 35.21vh;
   background-image: url("../img/map-mobile.jpg");
   background-size: cover;
+}
+
+.white-triangle {
+  width: 100%;
+  height: 50px;
 }
 
 
@@ -547,9 +539,11 @@ a.contacts__contact:active {
   &::after {
     @include clearfix;
   }
+  &__inner {
+    float: right;
+    width: 51.6%;
+  }
   &__title {
-    padding-left: 310px;
-    padding-right: 50px;
     padding-top: 41px;
     margin-bottom: 8px;
     font-size: 30px;
@@ -557,8 +551,6 @@ a.contacts__contact:active {
     font-weight: 600;
   }
   &__text {
-    padding-left: 310px;
-    padding-right: 12px;
     margin-bottom: 10px;
   }
   &__link {
@@ -575,7 +567,6 @@ a.contacts__contact:active {
   float: left;
   width: 261px;
   height: 302px;
-  margin-right: 8%;
 }
 
 .comments-slider {
@@ -741,16 +732,16 @@ a.contacts__contact:active {
   &__title {
     margin-bottom: 7px;
   }
-  &::after {
-    height: 65px;
-    bottom: -15%;
-  }
 }
 
 .map {
   height: 378px;
   background-image: url("../img/map-tablet.jpg");
 }
+
+  .white-triangle {
+    height: 70px;
+  }
 
 }
 
@@ -831,8 +822,10 @@ a.contacts__contact:active {
     padding-bottom: 0;
     font-size: 0;
     &::before {
-      top: -12%;
-      height: 150px;
+      top: 0;
+      height: 60%;
+      transform-origin: -3% 0;
+      transform: skewY(-4deg);
     }
     &::after {
       display: none;
@@ -899,6 +892,9 @@ a.contacts__contact:active {
     padding-top: 67px;
     padding-bottom: 67px;
     background-color: $second-bg;
+    &__inner {
+      width: 59.5%;
+    }
     &__title {
       padding-top: 91px;
       margin-bottom: 21px;
@@ -915,7 +911,6 @@ a.contacts__contact:active {
   }
 
   .watch {
-    margin-right: 7%;
     width: 300px;
     height: 346px;
   }
@@ -923,14 +918,18 @@ a.contacts__contact:active {
   .comments-slider {
     position: relative;
     padding-top: 183px;
-    &::before {
+    &__slides {
+      position: relative;
+    }
+    &__slides::before {
       content: " ";
       position: absolute;
-      top: 70px;
-      left: 600px;
+      top: -113px;
+      left: 435px;
       width: 77px;
-      height: 63px;
+      height: 64px;
       background-image: url(../img/quotes.svg);
+      background-repeat: no-repeat;
       opacity: .2;
     }
     &__slide {
@@ -946,24 +945,23 @@ a.contacts__contact:active {
         font-size: $font-size18;
       }
     }
-    &__arrows {
+    &__arrow {
       display: block;
       position: absolute;
-      width: 940px;
-    }
-    &__arrow {
-      position: absolute;
-      top: -160px;
       width: 22px;
       height: 42px;
       opacity: .3;
       cursor: pointer;
+      overflow: auto;
+      margin: auto;
+      top: 0; left: 0; bottom: 0; right: 0;
+
     }
     &__arrow--left {
-      left: 0;
+      right: 87%;
     }
     &__arrow--right {
-      right: 0;
+      left: 87%;
     }
     &__arrow:hover {
       opacity: .6;
@@ -977,8 +975,10 @@ a.contacts__contact:active {
     padding-top: 74px;
     padding-bottom: 96px;
     &::before {
-      top: -12%;
-      height: 150px;
+      top: 0;
+      height: 60%;
+      transform-origin: -3% 0;
+      transform: skewY(-4deg);
     }
     &__inner {
       width: 940px;
@@ -1040,6 +1040,10 @@ a.contacts__contact:active {
   .map {
     height: 526px;
     background-image: url(../img/map-desc.jpg);
+  }
+
+  .white-triangle {
+    height: 110px;
   }
 
 

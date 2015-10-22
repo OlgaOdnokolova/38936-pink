@@ -18,7 +18,16 @@ ul{
 
 a:active,
 a:hover {
-  outline: 0;
+  outline: none;
+}
+
+img {
+  display: block;
+}
+
+//убирает внутреннюю тень на мобил
+input {
+  -webkit-appearance: none;
 }
 
 .container {
@@ -40,10 +49,15 @@ p {
   padding: 20px 0;
   z-index: 9999;
   background-color: rgba(0,0,0,.3);
+  .container::after {
+    @include clearfix;
+  }
 }
 
-.logo {
+.main-header>.container>.logo {
   display: inline-block;
+  vertical-align: top;
+  float: left;
   width: 74px;
   height: 23px;
 }
@@ -68,27 +82,34 @@ p {
   }
 }
 
-.nav-btn, .nav-close {
-  display: inline-block;
-  text-indent: 3000px;
+.nav-btn {
+  display: block;
+  float: right;
+}
+
+@media (min-width: 660px) {
+  .nav-btn {
+    position: relative;
+    top: 18px;
+  }
+}
+
+.nav-close {
+  display: block;
 }
 
 .main-menu-svg {
-  position: absolute;
-  top: 20px;
-  left: 250px;
-  z-index: 4;
+  //position: absolute;
+  //top: 20px;
+  //right: 7%;
   width: 50px;
   height: 24px;
-  path {
-    fill: #fff;
-  }
 }
 
 .nav-close-svg {
   position: absolute;
   top: 20px;
-  left: 278px;
+  right: 20px;
   width: 22px;
   height: 23px;
   display: none;
@@ -165,8 +186,8 @@ p {
 .intro {
   position: relative;
   padding-top: 85px;
-  background-image: url("../img/background-mobile@1x.jpg");
-  background-size: 700px auto;
+  background-image: url("../img/background-mobile-my-xs@1x.jpg");
+  background-size: 320px auto;
   background-position: top;
   background-repeat: no-repeat;
   &__slogan {
@@ -184,7 +205,20 @@ p {
 
 @media (min-resolution: 1.5dppx) {
   .intro {
-    background-image: url(../img/background-mobile@2x.jpg);
+    background-image: url(../img/background-mobile-my-xs@2x.jpg);
+  }
+}
+
+@media (min-width: 321px) and (max-width: 659px) {
+  .intro {
+    background-image: url(../img/background-mobile@1x.jpg);
+    background-size: 659px auto;
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    .intro {
+      background-image: url(../img/background-mobile@2x.jpg);
+    }
   }
 }
 
@@ -260,6 +294,7 @@ p {
   &__btn-img--youtube {
     width: 15px;
     height: 15px;
+    transform: translate(-40%, -50%);
   }
   &__btn:active {
     border: 3px solid #e5e5e5;
@@ -332,7 +367,6 @@ p {
 
   .nav-close-svg {
     top: 45px;
-    left: 618px;
   }
 
   .main-nav:target .main-nav__element:first-child a {
@@ -342,14 +376,14 @@ p {
 
   .intro {
     padding-bottom: 25px;
-    background-image: url(../img/background-tablet@1x.jpg);
+    background-image: url(../img/background-tablet-my@1x.jpg);
     background-position: top;
-    background-size: 1200px auto;
+    background-size: 959px auto;
   }
 
   @media (min-resolution: 1.5dppx) {
     .intro {
-      background-image: url(../img/background-tablet@2x.jpg);
+      background-image: url(../img/background-tablet-my@2x.jpg);
     }
   }
 
@@ -466,9 +500,13 @@ p {
     &__element {
       display: inline-block;
       vertical-align: top;
+      padding: 0 32px;
     }
     &__element:first-child {
       display: none;
+    }
+    &__element:last-child {
+      padding-right: 0;
     }
     ul {
       display: block;
@@ -476,33 +514,35 @@ p {
     }
     &__element a {
       display: block;
-      padding-left: 35px;
-      padding-right: 30px;
       width: auto;
       height: auto;
+      padding-bottom: 7px;
       font-size: $font-size18;
       color: #fff;
       text-decoration: none;
     }
-    &__element:last-child a {
-      padding-right: 0;
-    }
     &__element:hover  a{
-      text-decoration: underline;
+      box-shadow: 0 2px 0 0 #fff;
     }
     &__element:active a {
-      text-decoration: none;
+      box-shadow: none;
       opacity: .3;
     }
   }
 
   .intro {
     padding-bottom: 40px;
-    background-image: url(../img/background-fullsize.jpg);
+    background-image: url(../img/background-fullsize-my1@.jpg);
     background-position: top;
     background-size: cover;
     &__slogan--inner {
       padding-bottom: 58px;
+    }
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    .intro {
+      background-image: url(../img/background-fullsize.jpg);
     }
   }
 
