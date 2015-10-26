@@ -8,7 +8,7 @@ module.exports = function(grunt) {
     sass: {
       style: {
         files: {
-          "build/css/style.css": ["source/sass/style.scss"]
+          "build/css/style.css": ["sass/style.scss"]
         }
       }
     },
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
       build: {
         files: [{
           expand: true,
-          cwd: "source",
+          //cwd: "source",
           src: [
             "img/**",
             "index.html",
@@ -87,7 +87,7 @@ module.exports = function(grunt) {
         separator: ";"
       },
       dist: {
-        src: ["source/js/script.js"],
+        src: ["js/script.js"],
         dest: "build/js/script.js"
       }
     },
