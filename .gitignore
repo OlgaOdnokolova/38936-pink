@@ -6,6 +6,7 @@ prepros.cfg
 *.sublime*
 *.map
 css/*.css
+build/
 
 .idea/38936-pink.iml
 
