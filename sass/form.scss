@@ -509,6 +509,7 @@ input[name="delete"] {
     border: $form-grey-border;
     border-radius: 3px;
     padding-left: 9.6%;
+    position: relative;
     &--pt34 {
       padding-top: 34px;
     }
@@ -519,6 +520,9 @@ input[name="delete"] {
       display: inline-block;
       text-align: center;
       @include form-block-title;
+      position: absolute;
+      top: -9px;
+      background: white;
     }
   }
 
